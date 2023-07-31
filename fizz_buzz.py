@@ -13,7 +13,7 @@ for split in final:
         split = "Buzz"
     print(split)    
 
-input()
+# or
 
 for number in range(1, 101):
     if number % 15 == 0:
@@ -25,4 +25,16 @@ for number in range(1, 101):
     else:
         print(number)
         
-input()
+# or
+
+final = 0
+
+while final < 101:
+    print(final)
+    final = final + 1
+    if final % 15 == 0:
+        print("FizzBuzz")
+    elif final % 3 == 0:
+        print("Fizz")
+    elif final % 5 == 0:
+        print("Buzz")

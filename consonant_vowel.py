@@ -10,5 +10,3 @@ for letter in sentence:
         final["Consonants"] = final["Consonants"] + 1
 
 print("Consonants:", final["Consonants"], "|", "Vowels:", final["Vowels"])
-
-input()

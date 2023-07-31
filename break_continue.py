@@ -13,5 +13,3 @@ for sentence in "be near":
         continue
     print("Value", sentence, "is important")
 print(sentence)
-
-input()

@@ -10,5 +10,3 @@ for number in numbers:
 final = abs(even - odd)
 
 print("Difference is:", final)
-
-input()

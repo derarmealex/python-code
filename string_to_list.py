@@ -11,5 +11,3 @@ print(stg2)
 final = [int(item.strip()) for item in stg2]
 
 print("List:", final)
-
-input()

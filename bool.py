@@ -9,5 +9,3 @@ if bool(n == user.get("Name")) and bool(user.get("Password") == p) == True:
     print("Ahoj Marek vítej v aplikaci! Pokračuj...")
 else:
     print("Uživatelské jméno nebo heslo nejsou v pořádku!")
-    
-input()

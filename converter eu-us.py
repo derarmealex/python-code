@@ -12,5 +12,3 @@ print(km, "km is", round(km*0.62, 2), "mile" "\n")
 print("Enter liters:")
 l = float(input())
 print(l, "l is", round(l*0.26, 2), "gal")
-
-input()

@@ -12,5 +12,3 @@ print(mile, "mile is", round(mile/0.62, 2), "km", "\n")
 print("Enter gallons:")
 gal = float(input())
 print(gal, "gal is", round(gal/0.26, 2), "l", "\n")
-
-input()

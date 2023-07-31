@@ -25,5 +25,3 @@ for st in {"*", "%", "waha", "wwah", "wah"}:   # like list/tuple, but arranged h
 lst3 = (1, 2, 3)
 for number in lst3:
     print(number)
-
-input()

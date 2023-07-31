@@ -14,6 +14,7 @@ else:
     print("All the letters are written down")
 
 print("Go on the loop")
+
 print("\n")
 
 for letter in ("a", "b", "c", "d"):
@@ -25,5 +26,3 @@ else:
     print("All the letters are written down")
     
 print("Go on the loop")
-
-input()

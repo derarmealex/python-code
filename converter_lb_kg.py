@@ -1,24 +1,24 @@
 repeat = True
 while repeat:
-    Lb = input("Enter libres:\n")
-    if Lb.isnumeric():
-        print(Lb, "lb is", round(int(Lb)/2.2, 2), "kg", "\n")
+    lb = input("Enter libres:\n")
+    if lb.isnumeric():
+        print(lb, "lb is", round(int(lb)/2.2, 2), "kg", "\n")
         repeat = False
-        another_Lb = input("Do you have another value for measure? y/n\n")
-        if another_Lb == "y":
+        another_lb = input("Do you have another value for measure? y/n\n")
+        if another_lb == "y":
             repeat = True
-        elif another_Lb == "n":
+        elif another_lb == "n":
             print("See ya again")
             input()
         else:
             pass
-    elif "." in Lb:
-        print(Lb, "lb is", round(float(Lb)/2.2, 2), "kg", "\n")
+    elif "." in lb:
+        print(lb, "lb is", round(float(lb)/2.2, 2), "kg", "\n")
         repeat = False
-        another_Lb = input("Do you have another value for measure? y/n\n")
-        if another_Lb == "y":
+        another_lb = input("Do you have another value for measure? y/n\n")
+        if another_lb == "y":
             repeat = True
-        elif another_Lb == "n":
+        elif another_lb == "n":
             print("See ya again")
             input()
         else:

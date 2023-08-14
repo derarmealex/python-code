@@ -3,7 +3,7 @@ while True:
     if kg.isnumeric():
         print(kg, "kg is", round(int(kg)*2.2, 2), "lb", "\n")
         while True:
-            another_choise = input("Do you have another value for measure? y/n\n")
+            another_choise = input("Do you have another value to measure? y/n\n")
             if another_choise == "y":
                 break
             elif another_choise == "n":
@@ -15,7 +15,7 @@ while True:
     elif "." in kg:
         print(kg, "kg is", round(float(kg)*2.2, 2), "lb", "\n")
         while True:
-            another_choise = input("Do you have another value for measure? y/n\n")
+            another_choise = input("Do you have another value to measure? y/n\n")
             if another_choise == "y":
                 break
             elif another_choise == "n":

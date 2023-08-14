@@ -17,8 +17,8 @@ while True:
             else:
                 print(f"{int(num1)} - {int(num2)} = {int(num1) - int(num2)}")
             while True:
-                goon = input("Like to do another operation?('y' for Yes, any other key for No): ")
-                if goon in ('y', 'Y'):
+                goon = input("Like to do another operation?('y' for Yes, any other key for No): ").lower()
+                if goon == 'y':
                     ctr = False
                     break
                 else:

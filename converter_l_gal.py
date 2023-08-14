@@ -3,7 +3,7 @@ while True:
     if l.isnumeric():
         print(l, "l is", round(int(l)*0.26, 2), "gal", "\n")
         while True:
-            another_choise = input("Do you have another value for measure? y/n\n")
+            another_choise = input("Do you have another value to measure? y/n\n")
             if another_choise == "y":
                 break
             elif another_choise == "n":
@@ -15,7 +15,7 @@ while True:
     elif "." in l:
         print(l, "l is", round(float(l)*0.26, 2), "gal", "\n")
         while True:
-            another_choise = input("Do you have another value for measure? y/n\n")
+            another_choise = input("Do you have another value to measure? y/n\n")
             if another_choise == "y":
                 break
             elif another_choise == "n":

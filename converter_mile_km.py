@@ -3,7 +3,7 @@ while True:
     if mile.isnumeric():
         print(mile, "mile is", round(int(mile)/0.62, 2), "km", "\n")
         while True:
-            another_choise = input("Do you have another value for measure? y/n\n")
+            another_choise = input("Do you have another value to measure? y/n\n")
             if another_choise == "y":
                 break
             elif another_choise == "n":
@@ -15,7 +15,7 @@ while True:
     elif "." in mile:
         print(mile, "mile is", round(float(mile)/0.62, 2), "km", "\n")
         while True:
-            another_choise = input("Do you have another value for measure? y/n\n")
+            another_choise = input("Do you have another value to measure? y/n\n")
             if another_choise == "y":
                 break
             elif another_choise == "n":

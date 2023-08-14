@@ -1,7 +1,7 @@
 while True:
-    l = input("Enter liters:\n")
-    if l.isnumeric():
-        print(l, "l is", round(int(l)*0.26, 2), "gal", "\n")
+    lb = input("Enter libres:\n")
+    if lb.isnumeric():
+        print(lb, "lb is", round(int(lb)/2.2, 2), "kg", "\n")
         while True:
             another_choise = input("Do you have another value to measure? y/n\n")
             if another_choise == "y":
@@ -12,8 +12,8 @@ while True:
                 exit()
             else:
                 print("\nPress 'y' or 'n'".upper())
-    elif "." in l:
-        print(l, "l is", round(float(l)*0.26, 2), "gal", "\n")
+    elif "." in lb:
+        print(lb, "lb is", round(float(lb)/2.2, 2), "kg", "\n")
         while True:
             another_choise = input("Do you have another value to measure? y/n\n")
             if another_choise == "y":

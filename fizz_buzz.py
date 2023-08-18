@@ -7,9 +7,7 @@ for number in range(1, 101):
         print("Buzz")
     else:
         print(number)
-
 # or
-
 final = [1]
 for number in final:
     if number < 100:
@@ -22,9 +20,7 @@ for split in final:
     elif split % 5 == 0:
         split = "Buzz"
     print(split)
-
 # or
-
 final = 1
 while final < 101:
     print(final)

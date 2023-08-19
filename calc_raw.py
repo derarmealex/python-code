@@ -1,3 +1,4 @@
+import re
 print('Summation:    "+",\nSubtraction:   "-",\n----------------------')
 while True:
     oper = input("Choose the operation: ")
@@ -9,13 +10,13 @@ while True:
         while ctr:
             num1 = input("Enter your first number: ")
             num2 = input("Enter your second number: ")
-            if not num1.isnumeric() or not num2.isnumeric():
+            if re.findall('[^.0123456789]', num1) or re.findall('[^.0123456789]', num2) or num1 == '.' or num2 == '.':
                 print("Enter a number!")
                 continue
             elif oper == "+":
-                print(f"{int(num1)} + {int(num2)} = {int(num1) + int(num2)}")
+                print(f"{float(num1)} + {float(num2)} = {float(num1) + float(num2)}")
             else:
-                print(f"{int(num1)} - {int(num2)} = {int(num1) - int(num2)}")
+                print(f"{float(num1)} - {float(num2)} = {float(num1) - float(num2)}")
             while True:
                 goon = input("Like to do another operation?('y' for Yes, any other key for No): ").lower()
                 if goon == 'y':

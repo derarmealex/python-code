@@ -1,4 +1,3 @@
-import re
 while True:
     m = (input("Enter mass of body in kg: "))
     h = (input("Enter height of body in cm: "))
@@ -21,7 +20,7 @@ while True:
             print("It's obese (class I)\n")
         elif calc >= 40.0:
             print("It's obese (class I)\n")
-    elif re.findall('[0-9][.]', m) and re.findall('[0-9][.]', h):
+    elif '.' in m or '.' in h:
         calc = round(float(m) / (float(h)/100)**2, 2)
         print("BMI is:", calc)
         if calc <= 16.0:

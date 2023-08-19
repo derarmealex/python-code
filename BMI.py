@@ -2,7 +2,7 @@ import re
 while True:
     m = (input("Enter mass of body in kg: "))
     h = (input("Enter height of body in cm: "))
-    if re.findall('[^.0123456789]', m) or re.findall('[^.0123456789]', h) or m == '.' or h == '.':
+    if re.findall('[^.0123456789]', m) or re.findall('[^.0123456789]', h) or m == '.' or h == '.' or m == '' or h == '':
         print("\nEnter an integer or fractional number!".upper())
     else:
         calc = round(float(m) / (float(h)/100)**2, 2)

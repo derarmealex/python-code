@@ -10,7 +10,7 @@ while True:
         while ctr:
             num1 = input("Enter your first number: ")
             num2 = input("Enter your second number: ")
-            if re.findall('[^.0123456789]', num1) or re.findall('[^.0123456789]', num2) or num1 == '.' or num2 == '.':
+            if re.findall('[^.\d]', num1) or re.findall('[^.\d]', num2) or num1 == '.' or num2 == '.':
                 print("Enter a number!")
                 continue
             elif oper == "+":
@@ -18,7 +18,7 @@ while True:
             else:
                 print(f"{float(num1)} - {float(num2)} = {float(num1) - float(num2)}")
             while True:
-                goon = input("Like to do another operation?('y' for Yes, any other key for No): ").lower()
+                goon = input("Like to do another operation?('y' for 'Yes', any other key for 'No'): ").lower()
                 if goon == 'y':
                     ctr = False
                     break

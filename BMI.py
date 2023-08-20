@@ -5,7 +5,8 @@ while True:
     if re.findall('[^.\d]', m) or re.findall('[^.\d]', h) or m == '.' or h == '.' or m == '' or h == '':
         print("\nEnter an integer or fractional number!".upper())
     else:
-        print("BMI is: ", round(float(m) / (float(h) / 100) ** 2, 2))
+        calc = round(float(m) / (float(h) / 100) ** 2, 2)
+        print("BMI is:", calc)
         if calc <= 16.0:
             print("It's underweight (severe thinness)\n")
         elif 16.0 < calc < 16.9:
@@ -21,4 +22,4 @@ while True:
         elif 35.0 < calc < 39.9:
             print("It's obese (class I)\n")
         elif calc >= 40.0:
-            print("It's obese (class I)\n")
+print("It's obese (class I)\n")

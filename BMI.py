@@ -5,8 +5,7 @@ while True:
     if re.findall('[^.\d]', m) or re.findall('[^.\d]', h) or m == '.' or h == '.' or m == '' or h == '':
         print("\nEnter an integer or fractional number!".upper())
     else:
-        calc = round(float(m) / (float(h) / 100) ** 2, 2)
-        print("BMI is:", calc)
+        print("BMI is: ", round(float(m) / (float(h) / 100) ** 2, 2))
         if calc <= 16.0:
             print("It's underweight (severe thinness)\n")
         elif 16.0 < calc < 16.9:

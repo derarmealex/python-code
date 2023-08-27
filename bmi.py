@@ -22,4 +22,4 @@ while True:
         elif 35.0 < calc < 39.9:
             print("It's obese (class I)\n")
         elif calc >= 40.0:
-print("It's obese (class I)\n")
+            print("It's obese (class I)\n")

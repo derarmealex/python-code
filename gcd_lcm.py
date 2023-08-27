@@ -2,7 +2,7 @@ def gcd_lcm(x, y):
     gcd = 1
     if y > x and y % x == 0:
         return (f'{x} | {y * x / x}')
-    if y < x and x % y == 0:
+    elif y < x and x % y == 0:
         return (f'{y} | {y * x / y}')
     for z in range(y, 0, -1):
         if y % z == 0 and x % z == 0:

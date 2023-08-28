@@ -8,7 +8,7 @@ def gcd_lcm(x, y):
         if y % z == 0 and x % z == 0:
             gcd = z
             break
-    return (f'{gcd} {y * x / gcd}')
+    return (f'{gcd} | {y * x / gcd}')
 print('gcd | lcm of 3, 15 is', gcd_lcm(3, 15))
 print('gcd | lcm of 19, 21 is', gcd_lcm(19, 21))
 print('gcd | lcm of 36, 12 is', gcd_lcm(36, 12))

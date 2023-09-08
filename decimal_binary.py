@@ -7,8 +7,8 @@ while True:
         while x > 0:
             y = x % 2
             final.append(y)
-            x = x // 2
+            x //= 2
     else:
-        print('Enter an integer number!'.upper())
+        print('\nEnter an integer number!')
     z = ''.join([str(x) for x in final[::-1]])
     print(f'{z:>08s}')

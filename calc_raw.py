@@ -8,8 +8,7 @@ while True:
     else:
         ctr = True
         while ctr:
-            num1 = input("Enter your first number: ")
-            num2 = input("Enter your second number: ")
+            num1, num2 = input("Enter your first number: "), input("Enter your second number: ")
             if re.findall('[^.\d]', num1) or re.findall('[^.\d]', num2) or num1 == '.' or num2 == '.':
                 print("Enter a number!")
                 continue

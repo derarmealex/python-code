@@ -1,7 +1,6 @@
 import re
 while True:
-    m = (input("Enter mass of body in kg: "))
-    h = (input("Enter height of body in cm: "))
+    m, h = input("Enter mass of body in kg: "), input("Enter height of body in cm: ")
     if re.findall('[^.\d]', m) or re.findall('[^.\d]', h) or m == '.' or h == '.' or m == '' or h == '':
         print("\nEnter an integer or fractional number!".upper())
     else:

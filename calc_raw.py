@@ -6,7 +6,8 @@ while True:
         'Multiplication:   "*"\n'
         'Division:         "/"\n'
         'Exponentiation:   "^"\n'
-        '---------------------')
+        '---------------------'
+        )
     oper = input("Choose the operation: ").strip()
     if oper not in ('+', '-', '*', '/', '^'):
         print("Wrong operator! Try again.")

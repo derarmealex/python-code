@@ -1,8 +1,8 @@
-import re
+from re import findall
 while True:
     cm = input("Enter cm:\n").strip()
-    if re.findall('[^.\d]', cm) or cm == '.' or cm == '':
-        print("Wrong value, enter a number".upper())
+    if findall('[^.\d]', cm) or cm == '.' or cm == '':
+        print("Wrong value, enter a number!".upper())
     else:
         q = round(float(cm) / 30.48, 2)
         w = str(q).split('.')[-1]

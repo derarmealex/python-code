@@ -1,8 +1,8 @@
-import re
+from re import findall
 while True:
     ft = input("Enter ft:\n").strip()
-    if re.findall('[^.\d]', ft) or ft == '.' or ft == '':
-        print("Wrong value, enter a number".upper())
+    if findall('[^.\d]', ft) or ft == '.' or ft == '':
+        print("Wrong value, enter a number!".upper())
     else:
         print(ft, "ft is", round(float(ft) * 30.48, 2), "cm" "\n")
         while True:

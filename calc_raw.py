@@ -1,4 +1,4 @@
-import re
+from re import findall
 while True:
     print(
         'Summation:        "+"\n'
@@ -9,13 +9,13 @@ while True:
         '---------------------')
     oper = input("Choose the operation: ").strip()
     if oper not in ('+', '-', '*', '/', '^'):
-        print("Wrong operator. Try again.")
+        print("Wrong operator! Try again.")
         continue
     else:
         ctr = True
         while ctr:
             num1, num2 = input("Enter your first number: ").strip(), input("Enter your second number: ").strip()
-            if re.findall('[^.\d]', num1) or re.findall('[^.\d]', num2) or num1 == '.' or num2 == '.':
+            if findall('[^.\d]', num1) or findall('[^.\d]', num2) or num1 == '.' or num2 == '.':
                 print("Enter a number!")
                 continue
             elif oper == "+":

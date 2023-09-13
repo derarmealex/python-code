@@ -1,7 +1,7 @@
-import re
+from re import findall
 while True:
     lb = input("Enter libres:\n").strip()
-    if re.findall('[^.\d]', lb) or lb == '.' or lb == '':
+    if findall('[^.\d]', lb) or lb == '.' or lb == '':
         print("Wrong value, enter a number".upper())
     else:
         print(lb, "lb is", round(float(lb) / 2.2, 2), "kg", "\n")

@@ -1,8 +1,8 @@
-import re
+from re import findall
 while True:
     gal = input("Enter gallons:\n").strip()
-    if re.findall('[^.\d]', gal) or gal == '.' or gal == '':
-        print("Wrong value, enter a number".upper())
+    if findall('[^.\d]', gal) or gal == '.' or gal == '':
+        print("Wrong value, enter a number!".upper())
     else:
         print(gal, "gal is", round(float(gal) / 0.26, 2), "l", "\n")
         while True:

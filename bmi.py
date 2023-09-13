@@ -1,7 +1,7 @@
-import re
+from re import findall
 while True:
     m, h = input("Enter mass of body in kg: ").strip(), input("Enter height of body in cm: ").strip()
-    if re.findall('[^.\d]', m) or re.findall('[^.\d]', h) or m == '.' or h == '.' or m == '' or h == '':
+    if findall('[^.\d]', m) or findall('[^.\d]', h) or m == '.' or h == '.' or m == '' or h == '':
         print("\nEnter an integer or fractional number!".upper())
     else:
         calc = round(float(m) / (float(h) / 100) ** 2, 2)

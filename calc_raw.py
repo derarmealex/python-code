@@ -1,8 +1,14 @@
 import re
-print('Summation:    "+",\nSubtraction:   "-",\n----------------------')
 while True:
+    print(
+        'Summation:        "+"\n'
+        'Subtraction:      "-"\n'
+        'Multiplication:   "*"\n'
+        'Division:         "/"\n'
+        'Exponentiation:   "^"\n'
+        '---------------------')
     oper = input("Choose the operation: ").strip()
-    if oper not in ('+', '-'):
+    if oper not in ('+', '-', '*', '/', '^'):
         print("Wrong operator. Try again.")
         continue
     else:
@@ -14,8 +20,14 @@ while True:
                 continue
             elif oper == "+":
                 print(f"{float(num1)} + {float(num2)} = {float(num1) + float(num2)}")
-            else:
+            elif oper == "-":
                 print(f"{float(num1)} - {float(num2)} = {float(num1) - float(num2)}")
+            elif oper == "*":
+                print(f"{float(num1)} * {float(num2)} = {float(num1) * float(num2)}")
+            elif oper == "/":
+                print(f"{float(num1)} / {float(num2)} = {float(num1) / float(num2)}")
+            else:
+                print(f"{float(num1)} ^ {float(num2)} = {float(num1) ** float(num2)}")
             while True:
                 goon = input("Like to do another operation?('y' for 'Yes', any other key for 'No'): ").lower()
                 if goon == 'y':

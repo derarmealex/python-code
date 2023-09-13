@@ -1,6 +1,6 @@
 import re
 while True:
-    mile = input("Enter miles:\n")
+    mile = input("Enter miles:\n").strip()
     if re.findall('[^.\d]', mile) or mile == '.' or mile == '':
         print("Wrong value, enter a number".upper())
     else:

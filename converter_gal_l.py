@@ -1,6 +1,6 @@
 import re
 while True:
-    gal = input("Enter gallons:\n")
+    gal = input("Enter gallons:\n").strip()
     if re.findall('[^.\d]', gal) or gal == '.' or gal == '':
         print("Wrong value, enter a number".upper())
     else:

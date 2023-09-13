@@ -1,6 +1,6 @@
 while True:
     final = []
-    x = input('Enter a number: ')
+    x = input('Enter a number: ').strip()
     if x.isnumeric():
         x = int(x)
         print(bin(x))

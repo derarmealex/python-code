@@ -1,10 +1,10 @@
-#ALL OF THEM
+# ALL OF THEM
 phrase = "ABBA, AUTOMATE, ABBAS, ABBACY, ABBATOIR"
 print(phrase.replace("A", "#"))                                         # #BB#, #UTOM#TE, #BB#S, #BB#CY, #BB#TOIR
-#or
+# or
 import re
 print(re.sub('A+', '#', phrase))                                        # #BB#, #UTOM#TE, #BB#S, #BB#CY, #BB#TOIR
-#or
+# or
 exchanged = []
 for letter in phrase:
     if letter != 'A':
@@ -12,15 +12,15 @@ for letter in phrase:
     else:
         exchanged.append('#')
 print("".join(exchanged))                                               # #BB#, #UTOM#TE, #BB#S, #BB#CY, #BB#TOIR
-#or                                                                    
+# or
 print("".join([letter if letter != 'A' else '#' for letter in phrase])) # #BB#, #UTOM#TE, #BB#S, #BB#CY, #BB#TOIR
-#THE FIRST X NUMBERS
+# THE FIRST X NUMBERS
 phrase = "ABBA, AUTOMATE, ABBAS, ABBACY, ABBATOIR"
 print(phrase.replace("A", "#", 2))                                      # #BB#, AUTOMATE, ABBAS, ABBACY, ABBATOIR
-#or
+# or
 import re
 print(re.sub('A+', '#', phrase, 2))                                     # #BB#, AUTOMATE, ABBAS, ABBACY, ABBATOIR
-#or
+# or
 exchanged = ""
 count_a = 0
 for letter in phrase:
@@ -32,7 +32,7 @@ for letter in phrase:
         exchanged += '#'
         count_a += 1
 print(exchanged)                                                        # #BB#, AUTOMATE, ABBAS, ABBACY, ABBATOIR
-#ALL "#" INSTEAD OF "A" EXCEPT FOR THE FIRST
+# ALL "#" INSTEAD OF "A" EXCEPT FOR THE FIRST
 phrase = "ABBA, AUTOMATE, ABBAS, ABBACY, ABBATOIR"
 exchanged = ""
 count_a = 0
@@ -46,7 +46,7 @@ for letter in phrase:
         exchanged += letter
         count_a += 1
 print(exchanged)                                                        # ABB#, #UTOM#TE, #BB#S, #BB#CY, #BB#TOIR
-#ALL "#" INSTEAD OF "A" EXCEPT FOR THE SECOND (OR THE OTHER ONE)
+# ALL "#" INSTEAD OF "A" EXCEPT FOR THE SECOND (OR THE OTHER ONE)
 phrase = "ABBA, AUTOMATE, ABBAS, ABBACY, ABBATOIR"
 exchanged = ""
 count_a = 0

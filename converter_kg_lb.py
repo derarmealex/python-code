@@ -1,6 +1,6 @@
 import re
 while True:
-    kg = input("Enter kilograms:\n")
+    kg = input("Enter kilograms:\n").strip()
     if re.findall('[^.\d]', kg) or kg == '.' or kg == '':
         print("Wrong value, enter a number".upper())
     else:

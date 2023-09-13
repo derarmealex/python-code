@@ -1,6 +1,6 @@
 import re
 while True:
-    cm = input("Enter cm:\n")
+    cm = input("Enter cm:\n").strip()
     if re.findall('[^.\d]', cm) or cm == '.' or cm == '':
         print("Wrong value, enter a number".upper())
     else:

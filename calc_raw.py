@@ -1,14 +1,14 @@
 import re
 print('Summation:    "+",\nSubtraction:   "-",\n----------------------')
 while True:
-    oper = input("Choose the operation: ")
-    if oper not in ('+','-'):
+    oper = input("Choose the operation: ").strip()
+    if oper not in ('+', '-'):
         print("Wrong operator. Try again.")
         continue
     else:
         ctr = True
         while ctr:
-            num1, num2 = input("Enter your first number: "), input("Enter your second number: ")
+            num1, num2 = input("Enter your first number: ").strip(), input("Enter your second number: ").strip()
             if re.findall('[^.\d]', num1) or re.findall('[^.\d]', num2) or num1 == '.' or num2 == '.':
                 print("Enter a number!")
                 continue

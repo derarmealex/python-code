@@ -5,7 +5,7 @@ while True:
         print("Palindrome")
     else:
         print("Not palindrome")
-#or
+# or
 while True:
     print("Enter any value: ")
     word = str(input().casefold())
@@ -13,7 +13,7 @@ while True:
         print("Palindrome")
     else:
         print("Not palindrome")
-#or
+# or
 while True:
     val = str(input("Enter any value: "))
     x = len(val)

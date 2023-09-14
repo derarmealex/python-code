@@ -1,12 +1,12 @@
 from re import findall
 while True:
-    km = input("Enter kilometres:\n").strip()
-    if findall('[^.\d]', km) or km == '.' or km == '':
-        print("Wrong value, enter a number!".upper())
+    km = input("Enter kilometres: ").strip()
+    if findall('[^.\d]', km) or km == '.' or km in '':
+        print("Enter a correct number!")
     else:
         print(km, "km is", round(float(km) * 0.62, 2), "mile", "\n")
         while True:
-            another_choise = input("Another value to measure? 'y' for 'Yes', any other key for 'No'\n").lower()
+            another_choise = input("Another value to measure? 'y' for 'Yes', any other key for 'No'\n").lower().strip()
             if another_choise == "y":
                 break
             else:

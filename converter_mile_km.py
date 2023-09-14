@@ -1,12 +1,12 @@
 from re import findall
 while True:
-    mile = input("Enter miles:\n").strip()
-    if findall('[^.\d]', mile) or mile == '.' or mile == '':
-        print("Wrong value, enter a number".upper())
+    mile = input("Enter miles: ").strip()
+    if findall('[^.\d]', mile) or mile == '.' or mile in '':
+        print("Enter a correct number!")
     else:
         print(mile, "mile is", round(float(mile) / 0.62, 2), "km", "\n")
         while True:
-            another_choise = input("Another value to measure? 'y' for 'Yes', any other key for 'No'\n").lower()
+            another_choise = input("Another value to measure? 'y' for 'Yes', any other key for 'No'\n").lower().strip()
             if another_choise == "y":
                 break
             else:

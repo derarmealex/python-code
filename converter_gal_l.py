@@ -1,12 +1,12 @@
 from re import findall
 while True:
-    gal = input("Enter gallons:\n").strip()
-    if findall('[^.\d]', gal) or gal == '.' or gal == '':
-        print("Wrong value, enter a number!".upper())
+    gal = input("Enter gallons: ").strip()
+    if findall('[^.\d]', gal) or gal == '.' or gal in '':
+        print("Enter a correct number!")
     else:
-        print(gal, "gal is", round(float(gal) / 0.26, 2), "l", "\n")
+        print(gal, "gal is", round(float(gal) / 0.26, 2), "lt", "\n")
         while True:
-            another_choise = input("Another value to measure? 'y' for 'Yes', any other key for 'No'\n").lower()
+            another_choise = input("Another value to measure? 'y' for 'Yes', any other key for 'No'\n").lower().strip()
             if another_choise == "y":
                 break
             else:

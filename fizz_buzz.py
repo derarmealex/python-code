@@ -23,8 +23,6 @@ for split in final:
 # or
 final = 1
 while final < 101:
-    print(final)
-    final += 1
     if final % 15 == 0:
         print("FizzBuzz")
         final += 1
@@ -33,4 +31,7 @@ while final < 101:
         final += 1
     elif final % 5 == 0:
         print("Buzz")
+        final += 1
+    else:
+        print(final)
         final += 1

@@ -1,7 +1,7 @@
 from re import findall
 while True:
     ft = input("Enter ft: ").strip()
-    if findall('[^.\d]', ft) or ft == '.' or ft in '':
+    if findall('[^.\d]', ft) or ft == '0' or ft == '.' or ft in '':
         print("Enter a correct number!")
     else:
         print(ft, "ft is", round(float(ft) * 30.48, 2), "cm" "\n")

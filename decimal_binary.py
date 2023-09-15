@@ -10,5 +10,5 @@ while True:
             x //= 2
     else:
         print('\nEnter an integer number!')
-    z = ''.join([str(x) for x in final[::-1]])
-    print(f'{z:>08s}')
+    final = ''.join([str(x) for x in final[::-1]])
+    print(f'{final:>08s}')

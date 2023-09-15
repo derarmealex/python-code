@@ -1,7 +1,7 @@
 from re import findall
 while True:
     km = input("Enter kilometres: ").strip()
-    if findall('[^.\d]', km) or km == '.' or km in '':
+    if findall('[^.\d]', km) or km == '0' or km == '.' or km in '':
         print("Enter a correct number!")
     else:
         print(km, "km is", round(float(km) * 0.62, 2), "mile", "\n")

@@ -62,11 +62,13 @@ for letter in phrase:
         count_a += 1
 print(exchanged)                                                        # #BBA, #UTOM#TE, #BB#S, #BB#CY, #BB#TOIR
 
-
 # STRING WITHOUT ALL THE "T"
 stg = "pythonist"
 
 print(stg.replace('t', ''))                                                                    # pyhonis
+# or
+import re
+print(re.sub('t+', '', stg))                                                                   # pyhonis
 # or
 final = []
 for letter in stg:
@@ -93,6 +95,9 @@ print("".join(["" + stg[letter] for letter in range(len(stg)) if letter != 8])) 
 stg = "pythonist"
 
 print(stg.replace('t', '', 1)) #or more than 1                                                 # pyhonist
+# or
+import re
+print(re.sub('t+', '', stg, 1))                                                                # pyhonist
 # or
 final = ""
 count_t = 0

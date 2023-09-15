@@ -1,7 +1,7 @@
 from re import findall
 while True:
     lt = input("Enter liters: ").strip()
-    if findall('[^.\d]', lt) or lt == '.' or lt in '':
+    if findall('[^.\d]', lt) or lt == '0' or lt == '.' or lt in '':
         print("Enter a correct number!")
     else:
         print(lt, "lt is", round(float(lt) * 0.26, 2), "gal", "\n")

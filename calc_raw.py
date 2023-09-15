@@ -15,8 +15,11 @@ while True:
     else:
         ctr = True
         while ctr:
-            num1, num2 = input("Enter your first number: ").strip(), input("Enter your second number: ").strip()
-            if findall('[^.\d-]', num1) or findall('[^.\d-]', num2) or num1 == '.' or num2 == '.' or num1 in '' or num2 in '':
+            num1 = input("Enter your first number: ").strip()
+            num2 = input("Enter your second number: ").strip()
+            if findall('[^.\d-]', num1) or findall('[^.\d-]', num2) \
+                    or num1 == '.' or num2 == '.' \
+                    or num1 in '' or num2 in '':
                 print("\nEnter a correct number!")
                 continue
             elif oper == "+":
@@ -26,7 +29,10 @@ while True:
             elif oper == "*":
                 print(f"{float(num1)} * {float(num2)} = {float(num1) * float(num2)}")
             elif oper == "/":
-                print(f"{float(num1)} / {float(num2)} = {float(num1) / float(num2)}")
+                try:
+                    print(f"{float(num1)} / {float(num2)} = {float(num1) / float(num2)}")
+                except (ZeroDivisionError):
+                    print("couldn't be divised by 0!\n")
             else:
                 print(f"{float(num1)} ^ {float(num2)} = {float(num1) ** float(num2)}")
             while True:

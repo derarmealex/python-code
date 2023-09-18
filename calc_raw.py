@@ -36,9 +36,9 @@ while True:
             else:
                 print(f"{float(num1)} ^ {float(num2)} = {float(num1) ** float(num2)}")
             while True:
-                goon = input("Like to do another operation?('y' for 'Yes', any other key for 'No'): ").lower().strip()
+                goon = input("\nLike to do another operation?('y' for 'Yes', any other key for 'No'): \n").lower().strip()
                 if goon == 'y':
                     ctr = False
                     break
-                else:
-                    exit()
+                print("\nSee ya again!")
+                exit()

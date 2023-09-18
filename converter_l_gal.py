@@ -11,5 +11,4 @@ while True:
                 break
             else:
                 print("\nSee ya again!")
-                input("Any key to exit")
                 exit()

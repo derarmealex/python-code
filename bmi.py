@@ -6,7 +6,7 @@ while True:
             or m == '0' or h == '0' \
             or m == '.' or h == '.' \
             or m in '' or h in '':
-        print("\nEnter a correct number!".upper())
+        print("\nEnter a correct number!")
     else:
         calc = round(float(m) / (float(h) / 100) ** 2, 2)
         print("BMI is:", calc)

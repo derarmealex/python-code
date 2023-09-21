@@ -1,4 +1,4 @@
-sentence = input('Enter a phrase to analyse: ')                             # 'What about Route66?..'
+sentence = input('Enter a phrase to analyse: ').lower().strip()                     # 'What about Route66?..'
 con = "bcdfghjklmnpqrstvwxz"
 vow = "aeiouy"
 num = "1234567890"
@@ -19,43 +19,3 @@ print(
 # Consonants: 5 | Vowels: 7 | Numbers: 2 | Other symbols: 7
 print(" | ".join([f"{key}: {value}" for key, value in final.items()]))
 # Consonants: 5 | Vowels: 7 | Numbers: 2 | Other symbols: 7
-
-
-# BOOL
-def fc(z):
-    print([f"{z} - {z in x}" for z in z if z in x])                         # ['u - True', 'e - True', 'i - ...
-    print([f"{z} - {z in x}" if z in x else f"{z} - {z in x}" for z in z])  # ['Z - False', 'v - False', 'u -  ...
-
-
-fc(z)
-# GENERATOR
-gen = (f"{z} - {z in x}" if z in x else f"{z} - {z in x}" for z in z)
-print(next(gen))                                                            # Z - False
-print(next(gen))                                                            # v - False
-print(next(gen))                                                            # u - True
-print(next(gen))                                                            # k - False
-
-
-# or
-def fungus():
-    for z in z:
-        yield z
-
-
-gen = (f"{z} - {z in x}" if z in x else f"{z} - {z in x}" for z in z)
-print(next(gen))                                                            # Z - False
-print(next(gen))                                                            # v - False
-print(next(gen))                                                            # u - True
-
-
-# or
-def fungus():
-    for z in z:
-        yield z
-
-
-gen = (f"{z} - {z in x}" if z in x else f"{z} - {z in x}" for z in z)
-itr = 0
-while itr < len(z):                                                         # Z - False
-    print(next(gen))                                                        # v - False
-    itr += 1                                                                # u - True ...

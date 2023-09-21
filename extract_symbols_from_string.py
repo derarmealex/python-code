@@ -1,4 +1,4 @@
-sentence = input('Enter a phrase to analyse: ').lower().strip()                     # 'What about Route66?..'
+sentence = input('Enter a phrase to analyse: ').lower().strip()                 # 'What about Route66?..'
 con = "bcdfghjklmnpqrstvwxz"
 vow = "aeiouy"
 num = "1234567890"
@@ -17,5 +17,6 @@ print(
     "Numbers:", final["Numbers"], "|", "Other symbols:", final["Other symbols"]
     )
 # Consonants: 5 | Vowels: 7 | Numbers: 2 | Other symbols: 7
+# or
 print(" | ".join([f"{key}: {value}" for key, value in final.items()]))
 # Consonants: 5 | Vowels: 7 | Numbers: 2 | Other symbols: 7

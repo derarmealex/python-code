@@ -26,4 +26,3 @@ while True:
         print(''.join([x for x in final]), '\n')
     else:
         print("\nUse only letters!\n")
-    

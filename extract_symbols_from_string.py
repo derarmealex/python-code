@@ -1,8 +1,8 @@
 sentence = input('Enter a phrase to analyse: ')                             # 'What about Route66?..'
-con = "aeiouy"
-vow = "bcdfghjklmnpqrstvwxz"
+con = "bcdfghjklmnpqrstvwxz"
+vow = "aeiouy"
 num = "1234567890"
-final = {"Vowels": 0, "Consonants": 0, "Numbers": 0, "Other symbols": 0}
+final = {"Consonants": 0, "Vowels": 0, "Numbers": 0, "Other symbols": 0}
 for i in sentence:
     if i in con:
         final["Consonants"] += 1
@@ -13,12 +13,12 @@ for i in sentence:
     else:
         final["Other symbols"] += 1
 print(
-    "Vowels:", final["Vowels"], "|", "Consonants:", final["Consonants"], "|",
-    "Numbers:", final["Numbers"], "|", "Other symbols:", final["Consonants"]
+    "Consonants:", final["Consonants"], "|", "Vowels:", final["Vowels"], "|",
+    "Numbers:", final["Numbers"], "|", "Other symbols:", final["Other symbols"]
     )
-# Vowels: 7 | Consonants: 7 | Numbers: 2 | Other symbols: 5
+# Consonants: 5 | Vowels: 7 | Numbers: 2 | Other symbols: 7
 print(" | ".join([f"{key}: {value}" for key, value in final.items()]))
-# Vowels: 7 | Consonants: 7 | Numbers: 2 | Other symbols: 5
+# Consonants: 5 | Vowels: 7 | Numbers: 2 | Other symbols: 7
 
 
 # BOOL

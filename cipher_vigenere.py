@@ -1,3 +1,4 @@
+# WITHOUT ORD(), CHR() FORMAT
 while True:
     word = input("Enter a word to cypher     (only letters): ")[::-1].lower().strip()
 # 1: 'slovtso' ['ostvols']                  # 2: 'moribundus'  ['sudnubirom']
@@ -39,6 +40,21 @@ while True:
             f"  Cyphered        : {final}    \n"
             f"  Cypher(password): {pas}      \n"
             )
-# 1: etlkaoa                                # 2: vjhsxqmwrb
+# 1: Precyphered     : slovtso               # 2: Precyphered     : moribundus
+##   Cyphered        : etlkaoa               ##   Cyphered        : vjhsxqmwrb
+##   Cypher(password): parolchik             ##   Cypher(password): code
     else:
         print("\n Use only base letters! \n")
+# STANDARD
+word = input("Enter a word to cypher     (only letters): ").lower().strip()
+pas  = input("Enter a password to cypher (only letters): ").lower().strip()
+fit_pas = ""
+while len(word) > len(fit_pas):
+    for letter in pas:
+        fit_pas += letter
+fit_pas = fit_pas[:len(word)]
+dig_vstup = [ord(char) - 96 for char in word]
+dig_heslo = [ord(char) - 96 for char in fit_pas]
+cipher = list(map(sum, zip(dig_vstup, dig_heslo)))
+final = (''.join([chr(char + 96) if char + 96 < 123 else chr(char + 96 - 26) for char in cipher]))
+print(final)

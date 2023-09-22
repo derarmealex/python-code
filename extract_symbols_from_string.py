@@ -2,7 +2,7 @@ sentence = input('Enter a phrase to analyse: ').lower().strip()                 
 con = "bcdfghjklmnpqrstvwxz"
 vow = "aeiouy"
 num = "1234567890"
-final = {"Consonants": 0, "Vowels": 0, "Numbers": 0, "Other symbols": 0}
+final = {"Consonants": 0, "Vowels": 0, "Numbers": 0, "Others": 0}
 for i in sentence:
     if i in con:
         final["Consonants"] += 1
@@ -11,12 +11,12 @@ for i in sentence:
     elif i in num:
         final["Numbers"] += 1
     else:
-        final["Other symbols"] += 1
+        final["Others"] += 1
 print(
     "Consonants:", final["Consonants"], "|", "Vowels:", final["Vowels"], "|",
-    "Numbers:", final["Numbers"], "|", "Other symbols:", final["Other symbols"]
+    "Numbers:", final["Numbers"], "|", "Others:", final["Others"]
     )
-# Consonants: 5 | Vowels: 7 | Numbers: 2 | Other symbols: 7
+# Consonants: 5 | Vowels: 7 | Numbers: 2 | Others: 7
 # or
 print(" | ".join([f"{key}: {value}" for key, value in final.items()]))
-# Consonants: 5 | Vowels: 7 | Numbers: 2 | Other symbols: 7
+# Consonants: 5 | Vowels: 7 | Numbers: 2 | Others: 7

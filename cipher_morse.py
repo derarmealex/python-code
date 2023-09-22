@@ -6,7 +6,7 @@ morse_abc = [
             ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."
             ]
 while True:
-    word = input("Enter a word to cypher in Morse code (only letters): ").lower().strip()
+    word = input("Enter a word to cypher in morse code (only letters): ").lower().strip()
 # 'leonardo'
     if word.isalpha():
         word_digit = []
@@ -36,7 +36,7 @@ morse_abc = [
             ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."
             ]
 while True:
-    word = input("Enter a word in Morse code to decipher (only morse letters): ").lower().strip()
+    word = input("Enter a word in morse code to decipher (only morse letters): ").lower().strip()
 # '.-.. . --- -. .- .-. -.. ---'
     word_split = word.split()
 # ['.-..', '.', '---', '-.', '.-', '.-.', '-..', '---']

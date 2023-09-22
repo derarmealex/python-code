@@ -1,4 +1,4 @@
-# WITHOUT ORD(), CHR() FORMAT
+# WITHOUT ORD(), CHR() FORMAT + REVERSE (LINE 3)
 while True:
     word = input("Enter a word to cypher     (only letters): ")[::-1].lower().strip()
 # 1: 'slovtso' ['ostvols']                  # 2: 'moribundus'  ['sudnubirom']
@@ -53,8 +53,15 @@ while len(word) > len(fit_pas):
     for letter in pas:
         fit_pas += letter
 fit_pas = fit_pas[:len(word)]
-dig_vstup = [ord(char) - 96 for char in word]
-dig_heslo = [ord(char) - 96 for char in fit_pas]
-cipher = list(map(sum, zip(dig_vstup, dig_heslo)))
+dig_word = [ord(char) - 96 for char in word]
+dig_pas = [ord(char) - 96 for char in fit_pas]
+cipher = list(map(sum, zip(dig_word, dig_pas)))
 final = (''.join([chr(char + 96) if char + 96 < 123 else chr(char + 96 - 26) for char in cipher]))
-print(final)
+print(
+            f"\n  Precyphered     : {word}   \n"
+            f"  Cyphered        : {final}    \n"
+            f"  Cypher(password): {pas}      \n"
+            )
+# 1: Precyphered     : slovtso               # 2: Precyphered     : moribundus
+##   Cyphered        : imgkfvw               ##   Cyphered        : pdvnejrixh
+##   Cypher(password): parolchik             ##   Cypher(password): code

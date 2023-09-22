@@ -1,4 +1,4 @@
-# FROM ABC TO MORSE ABC
+# FROM ABC TO MORSE ABC <==> FROM MORSE ABC TO ABC
 abc = "abcdefghijklmnopqrstuvwxyz"
 morse_abc = [
             ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....",
@@ -23,10 +23,11 @@ while True:
             f"\n  Precyphered : {word}\n"
             f"  Cyphered    : {final}\n"
             )
-# Precyphered : leonardo
-##Cyphered    : .-.. . --- -. .- .-. -.. ---
     else:
         print("\n Use only base letters! \n")
+# OUTPUT        Precyphered : leonardo
+#               Cyphered    : .-.. . --- -. .- .-. -.. ---
+
 # FROM MORSE ABC TO ABC
 abc = "abcdefghijklmnopqrstuvwxyz"
 morse_abc = [
@@ -40,7 +41,7 @@ while True:
     split_word = word.split()
 # ['.-..', '.', '---', '-.', '.-', '.-.', '-..', '---']
 #       print(split_word)
-    if set(morse_abc) | set(split_word) == set(morse_abc):
+    if set(morse_abc) | set(split_word) == set(morse_abc):  # if there's only morse letters in the word
         digit_word = []
 # [11, 4, 14, 13, 0, 17, 3, 14]
         for letter in split_word:
@@ -55,7 +56,7 @@ while True:
             f"\n  Precyphered : {word}\n"
             f"  Cyphered    : {final}\n"
             )
-# Precyphered : .-.. . --- -. .- .-. -.. ---
-##Cyphered    : leonardo
     else:
         print("\n Use only morse letters! \n")
+# OUTPUT        Precyphered : .-.. . --- -. .- .-. -.. ---
+#               Cyphered    : leonardo

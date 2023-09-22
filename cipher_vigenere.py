@@ -59,18 +59,18 @@ while True:
                 fit_pas += letter
         fit_pas = fit_pas[:len(word)]
 #        print(fit_pas)
-        dig_word = [ord(char) - 96 for char in word]
+        digit_word = [ord(char) - 96 for char in word]
 #1: [19, 12, 15, 22, 20, 19, 15]            # 2: [13, 15, 18, 9, 2, 21, 14, 4, 21, 19]
-#        print(dig_word)
-        dig_pas = [ord(char) - 96 for char in fit_pas]
+#        print(digit_word)
+        digit_pas = [ord(char) - 96 for char in fit_pas]
 # 1: [16, 1, 18, 15, 12, 3, 8]              # 2: [3, 15, 4, 5, 3, 15, 4, 5, 3, 15]
-#        print(dig_pas)
-        cipher = list(map(sum, zip(dig_word, dig_pas)))
+#        print(digit_pas)
+        cipher = list(map(sum, zip(digit_word, digit_pas)))
         final = (''.join([chr(char + 96) if char + 96 < 123 else chr(char + 96 - 26) for char in cipher]))
         print(
-                    f"\n  Precyphered     : {word}   \n"
-                    f"  Cyphered        : {final}    \n"
-                    f"  Cypher(password): {pas}      \n"
+                    f"\n  Precyphered     : {word}\n"
+                    f"  Cyphered        : {final}\n"
+                    f"  Cypher(password): {pas}\n"
                     )
 # 1: Precyphered     : slovtso               # 2: Precyphered     : moribundus
 ##   Cyphered        : imgkfvw               ##   Cyphered        : pdvnejrixh

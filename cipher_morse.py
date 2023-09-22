@@ -9,14 +9,14 @@ while True:
     word = input("Enter a word to cypher in morse code (only letters): ").lower().strip()
 # 'leonardo'
     if word.isalpha():
-        word_digit = []
+        digit_word = []
 # [11, 4, 14, 13, 0, 17, 3, 14]
         for letter in word:
             ix = abc.find(letter)
-            word_digit.append(int(ix))
+            digit_word.append(int(ix))
 #       print(word_digit)
         final = []
-        for item in word_digit:
+        for item in digit_word:
             final.append(morse_abc[item])
         final = ' '.join([letter for letter in final])
         print(
@@ -27,7 +27,6 @@ while True:
 ##Cyphered    : .-.. . --- -. .- .-. -.. ---
     else:
         print("\n Use only base letters! \n")
-
 # FROM MORSE ABC TO ABC
 abc = "abcdefghijklmnopqrstuvwxyz"
 morse_abc = [
@@ -38,18 +37,18 @@ morse_abc = [
 while True:
     word = input("Enter a word in morse code to decipher (only morse letters): ").strip()
 # '.-.. . --- -. .- .-. -.. ---'
-    word_split = word.split()
+    split_word = word.split()
 # ['.-..', '.', '---', '-.', '.-', '.-.', '-..', '---']
-#       print(word_split)
-    if set(morse_abc) | set(word_split) == set(morse_abc):
-        word_digit = []
+#       print(split_word)
+    if set(morse_abc) | set(split_word) == set(morse_abc):
+        digit_word = []
 # [11, 4, 14, 13, 0, 17, 3, 14]
-        for letter in word_split:
+        for letter in split_word:
             ix = morse_abc.index(letter)
-            word_digit.append(int(ix))
-#       print(word_digit)
+            digit_word.append(int(ix))
+#       print(digit_word)
         final = []
-        for item in word_digit:
+        for item in digit_word:
             final.append(abc[item])
         final = ''.join([letter for letter in final])
         print(

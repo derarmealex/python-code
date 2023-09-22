@@ -46,22 +46,24 @@ while True:
     else:
         print("\n Use only base letters! \n")
 # STANDARD
-word = input("Enter a word to cypher     (only letters): ").lower().strip()
-pas  = input("Enter a password to cypher (only letters): ").lower().strip()
-fit_pas = ""
-while len(word) > len(fit_pas):
-    for letter in pas:
-        fit_pas += letter
-fit_pas = fit_pas[:len(word)]
-dig_word = [ord(char) - 96 for char in word]
-dig_pas = [ord(char) - 96 for char in fit_pas]
-cipher = list(map(sum, zip(dig_word, dig_pas)))
-final = (''.join([chr(char + 96) if char + 96 < 123 else chr(char + 96 - 26) for char in cipher]))
-print(
-            f"\n  Precyphered     : {word}   \n"
-            f"  Cyphered        : {final}    \n"
-            f"  Cypher(password): {pas}      \n"
-            )
+while True:
+    word = input("Enter a word to cypher     (only letters): ").lower().strip()
+    pas  = input("Enter a password to cypher (only letters): ").lower().strip()
+    if word.isalpha() and pas.isalpha():
+        fit_pas = ""
+        while len(word) > len(fit_pas):
+            for letter in pas:
+                fit_pas += letter
+        fit_pas = fit_pas[:len(word)]
+        dig_word = [ord(char) - 96 for char in word]
+        dig_pas = [ord(char) - 96 for char in fit_pas]
+        cipher = list(map(sum, zip(dig_word, dig_pas)))
+        final = (''.join([chr(char + 96) if char + 96 < 123 else chr(char + 96 - 26) for char in cipher]))
+        print(
+                    f"\n  Precyphered     : {word}   \n"
+                    f"  Cyphered        : {final}    \n"
+                    f"  Cypher(password): {pas}      \n"
+                    )
 # 1: Precyphered     : slovtso               # 2: Precyphered     : moribundus
 ##   Cyphered        : imgkfvw               ##   Cyphered        : pdvnejrixh
 ##   Cypher(password): parolchik             ##   Cypher(password): code

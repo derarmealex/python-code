@@ -1,9 +1,11 @@
 while True:
-    num_to_ctr = input("Enter a number to count: ").strip()     # 13579
+    num_to_ctr = input("Enter a number to count units: ").strip()
+# 13579
     if num_to_ctr.isnumeric():
         num_len = len(num_to_ctr)
         num_to_ctr = int(num_to_ctr)
-        #count = []                                             # [9, 7, 5, 3, 1]
+        #count = []
+# [9, 7, 5, 3, 1]
         count = {}
         for step in range(num_len):
             unit = num_to_ctr % 10

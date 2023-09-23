@@ -16,15 +16,18 @@ while True:
             num_to_ctr = next_step
 #        print(count)
         for key, value in count.items():
-            print(f"{key:>{num_len}} : {value}")
+            output_space = num_len - len(key)
+            print(key, " "*output_space, "u-->:", value)
+#            print(f"\t^{key}{' '*output_space} u-->: {value}")
         print("")
     else:
         print("\n\tEnter a number!\n")
 # OUTPUT
 #       {'1': 9, '10': 7, '100': 5, '1000': 3, '10000': 1}
 # or
-#               1 : 9
-#              10 : 7
-#             100 : 5
-#            1000 : 3
-#           10000 : 1
+#       ^1      u-->: 9
+# 	    ^10     u-->: 7
+# 	    ^100    u-->: 5
+# 	    ^1000   u-->: 3
+# 	    ^10000  u-->: 2
+# 	    ^100000 u-->: 1

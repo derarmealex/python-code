@@ -6,12 +6,12 @@ while True:
         #count = []                                             # [9, 7, 5, 3, 1]
         count = {}
         for step in range(num_len):
-            item = num_to_ctr % 10
-            #count.append(item)
-            #x = "1" + "0" * step + " : " + str(item)
+            unit = num_to_ctr % 10
+            #count.append(unit)
+            #x = "1" + "0" * step + " : " + str(unit)
             #print(f"{x:>{num_len*2}}")
             dict_key = "1" + "0" * step
-            count[dict_key] = item
+            count[dict_key] = unit
             next_step = num_to_ctr // 10
             num_to_ctr = next_step
 #        print(count)

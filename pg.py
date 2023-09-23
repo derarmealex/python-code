@@ -18,7 +18,7 @@ while True:
     print(q[len("bytearray(b'"):-2])
 """
 # or
-move = 
+move =
 abc = 'abcdefghijklmnopqrstuvwxyz'
 abc = enumerate(abc)
 while True:

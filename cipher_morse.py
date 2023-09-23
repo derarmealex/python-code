@@ -20,11 +20,11 @@ while True:
             final.append(morse_abc[item])
         final = " ".join([letter for letter in final])
         print(
-            f"\n  Precyphered : {word}\n"
-            f"  Cyphered    : {final}\n"
+            f"\n\tPrecyphered : {word}\n"
+            f"\tCyphered    : {final}\n"
             )
     else:
-        print("\n Use only base letters! \n")
+        print("\n\tUse only base letters!\n")
 # OUTPUT        Precyphered : leonardo
 #               Cyphered    : .-.. . --- -. .- .-. -.. ---
 
@@ -53,10 +53,10 @@ while True:
             final.append(abc[item])
         final = "".join([letter for letter in final])
         print(
-            f"\n  Precyphered : {word}\n"
-            f"  Cyphered    : {final}\n"
+            f"\n\tPrecyphered : {word}\n"
+            f"\tCyphered    : {final}\n"
             )
     else:
-        print("\n Use only morse letters! \n")
+        print("\n\tUse only morse letters!\n")
 # OUTPUT        Precyphered : .-.. . --- -. .- .-. -.. ---
 #               Cyphered    : leonardo

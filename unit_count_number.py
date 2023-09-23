@@ -1,0 +1,21 @@
+while True:
+    num_to_ctr = input("Enter a number to count: ").strip()     # 13579
+    if num_to_ctr.isnumeric():
+        num_len = len(num_to_ctr)
+        num_to_ctr = int(num_to_ctr)
+        #count = []                                             # [9, 7, 5, 3, 1]
+        count = {}
+        for step in range(num_len):
+            item = num_to_ctr % 10
+        #    count.append(item)
+        #    x = "1" + "0" * step + " : " + str(item)
+        #    print(f"{x:>{num_len*2}}")
+            dict_key = "1" + "0" * step
+            count[dict_key] = item
+            next_step = num_to_ctr // 10
+            num_to_ctr = next_step
+        for key, value in count.items():
+            print(f"{key:>{num_len}} : {value}")
+        print("")
+    else:
+        print("\n\tEnter a number!\n")

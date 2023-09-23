@@ -19,3 +19,8 @@ while True:
         print("")
     else:
         print("\n\tEnter a number!\n")
+# OUTPUT            1 : 9
+#                  10 : 7
+#                 100 : 5
+#                1000 : 3
+#               10000 : 1

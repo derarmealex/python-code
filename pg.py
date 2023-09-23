@@ -1,5 +1,5 @@
-a = "oqrcvmes"
-b = "0304071115"
+a = ""
+b = ""
 for x, y in zip(a, b): print(x + y, end='')
 """
 def pp(x):
@@ -9,7 +9,7 @@ def pp(x):
 
 
 while True:
-    move = 3
+    move = 
     stg = 'abcdefghijklmnopqrstuvwxyz'
     stg = enumerate(stg)
     final = []
@@ -18,7 +18,7 @@ while True:
     print(q[len("bytearray(b'"):-2])
 """
 # or
-move = 3
+move = 
 abc = 'abcdefghijklmnopqrstuvwxyz'
 abc = enumerate(abc)
 while True:

@@ -18,7 +18,7 @@ while True:
         final = []
         for item in digit_word:
             final.append(morse_abc[item])
-        final = ' '.join([letter for letter in final])
+        final = " ".join([letter for letter in final])
         print(
             f"\n  Precyphered : {word}\n"
             f"  Cyphered    : {final}\n"
@@ -51,7 +51,7 @@ while True:
         final = []
         for item in digit_word:
             final.append(abc[item])
-        final = ''.join([letter for letter in final])
+        final = "".join([letter for letter in final])
         print(
             f"\n  Precyphered : {word}\n"
             f"  Cyphered    : {final}\n"

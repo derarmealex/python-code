@@ -7,20 +7,24 @@ while True:
         count = {}
         for step in range(num_len):
             item = num_to_ctr % 10
-        #    count.append(item)
-        #    x = "1" + "0" * step + " : " + str(item)
-        #    print(f"{x:>{num_len*2}}")
+            #count.append(item)
+            #x = "1" + "0" * step + " : " + str(item)
+            #print(f"{x:>{num_len*2}}")
             dict_key = "1" + "0" * step
             count[dict_key] = item
             next_step = num_to_ctr // 10
             num_to_ctr = next_step
+#        print(count)
         for key, value in count.items():
             print(f"{key:>{num_len}} : {value}")
         print("")
     else:
         print("\n\tEnter a number!\n")
-# OUTPUT            1 : 9
-#                  10 : 7
-#                 100 : 5
-#                1000 : 3
-#               10000 : 1
+# OUTPUT
+#       {'1': 9, '10': 7, '100': 5, '1000': 3, '10000': 1}
+# or
+#               1 : 9
+#              10 : 7
+#             100 : 5
+#            1000 : 3
+#           10000 : 1

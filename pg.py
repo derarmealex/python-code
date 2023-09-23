@@ -1,6 +1,6 @@
-a = 'lfydtd'
-b = "12181"                                                     # moribundus
-for x, y in zip(a, b): print(x + y, end='')                     # o0a4g0b6o0j0l1j0u1m1
+a = "oqrcvmes"
+b = "0304071115"
+for x, y in zip(a, b): print(x + y, end='')
 """
 def pp(x):
     for ix, item in stg:
@@ -22,18 +22,18 @@ move = 3
 abc = 'abcdefghijklmnopqrstuvwxyz'
 abc = enumerate(abc)
 while True:
-    word = input('Enter a word...  ').lower().strip()           # 'moribundus'
+    word = input('Enter a word...  ').lower().strip()
     if word.isalpha():
         word_digit = []
         for ix, letter in abc:
             if letter in word:
                 word_digit.append(ix + move)
-#       print(word_digit)                                   # [4, 6, 11, 15, 16, 17, 20, 21, 23]
+#       print(word_digit)
         cyph_word = str(bytearray(word_digit))
-#       print(cyph_word)                                    # bytearray(b'\x04\x06\x0b\x0f\x10\x11\x14\x15\x17')
+#       print(cyph_word)
 #       q = cyph_word[len("bytearray(b'"):-2]
-#       print(q)                                            # \x04\x06\x0b\x0f\x10\x11\x14\x15\x17
+#       print(q)
         cyph_word = ''.join([num for num in cyph_word if num.isnumeric()])
-        print(cyph_word)                                    # 0406001011141517
+        print(cyph_word)
     else:
         print("\n\tUse only base letters!\n")

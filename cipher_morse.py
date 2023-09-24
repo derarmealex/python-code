@@ -6,8 +6,12 @@ morse_abc = [
             ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."
             ]
 while True:
-    word = input("Enter a word to cypher in morse code (only letters): ").lower().strip()
-# 'leonardo'
+    word = input(
+                "Enter a word to cypher in morse code (only letters), or \n"
+                "enter a word in morse code to decipher (only morse letters): "
+                ).lower().strip()
+    split_word = word.split()                                   # for converting to regular ABC
+# 'leonardo'                                                    # '.-.. . --- -. .- .-. -.. ---
     if word.isalpha():
         digit_word = []
 # [11, 4, 14, 13, 0, 17, 3, 14]
@@ -23,25 +27,11 @@ while True:
             f"\n\tPrecyphered : {word}\n"
             f"\tCyphered    : {final}\n"
             )
-    else:
-        print("\n\tUse only base letters!\n")
-# OUTPUT        Precyphered : leonardo
+# OUTPUT
+#               Precyphered : leonardo
 #               Cyphered    : .-.. . --- -. .- .-. -.. ---
-
-# FROM MORSE ABC TO ABC
-abc = "abcdefghijklmnopqrstuvwxyz"
-morse_abc = [
-            ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....",
-            "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-",
-            ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."
-            ]
-while True:
-    word = input("Enter a word in morse code to decipher (only morse letters): ").strip()
-# '.-.. . --- -. .- .-. -.. ---'
-    split_word = word.split()
-# ['.-..', '.', '---', '-.', '.-', '.-.', '-..', '---']
-#       print(split_word)
-    if set(morse_abc) | set(split_word) == set(morse_abc):  # if there's only morse letters in the word
+    elif set(morse_abc) | set(split_word) == set(morse_abc):    # if there's only morse letters in the word
+        split_word = word.split()
         digit_word = []
 # [11, 4, 14, 13, 0, 17, 3, 14]
         for letter in split_word:
@@ -55,8 +45,8 @@ while True:
         print(
             f"\n\tPrecyphered : {word}\n"
             f"\tCyphered    : {final}\n"
-            )
-    else:
-        print("\n\tUse only morse letters!\n")
+        )
 # OUTPUT        Precyphered : .-.. . --- -. .- .-. -.. ---
 #               Cyphered    : leonardo
+    else:
+        print("\n\tUse only base letters or only morse characters!\n")

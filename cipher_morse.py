@@ -11,8 +11,8 @@ while True:
                 "enter a word in morse code to decipher (only morse letters): "
                 ).lower().strip()
     split_word = word.split()                                   # for converting to regular ABC
-# 'leonardo'                                                    # '.-.. . --- -. .- .-. -.. ---
     if word.isalpha():
+# 'leonardo'
         digit_word = []
 # [11, 4, 14, 13, 0, 17, 3, 14]
         for letter in word:
@@ -34,6 +34,7 @@ while True:
 #       Precyphered : leonardo
 #       Cyphered    : .-.. . --- -. .- .-. -.. ---
     elif set(morse_abc) | set(split_word) == set(morse_abc):    # if there's only morse letters in the word
+# '.-.. . --- -. .- .-. -.. ---
         split_word = word.split()
         digit_word = []
 # [11, 4, 14, 13, 0, 17, 3, 14]

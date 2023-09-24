@@ -5,7 +5,7 @@ while True:
         count = {}
         for ix, unit in enumerate(num_to_ctr):
             dict_key = "1" + ("0" * ix)
-            count[dict_key] = unit
+            count[dict_key] = int(unit)
 #        print(count)
         for key, value in count.items():
             output_space = len(num_to_ctr) - len(key) + 1
@@ -39,7 +39,7 @@ while True:
 # INPUT
 #       Enter a number to count units: 123579
 # OUTPUT
-#       {'1': '9', '10': '7', '100': '5', '1000': '3', '10000': '2', '100000': '1'}
+#       {'1': 9, '10': 7, '100': 5, '1000': 3, '10000': 2, '100000': 1}
 # or
 #       ^1      u-*>: 9
 #       ^10     u-*>: 7

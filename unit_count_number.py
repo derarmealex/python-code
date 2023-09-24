@@ -19,7 +19,7 @@ while True:
 #        print(count)
         for key, value in count.items():
             output_space = num_len - len(key)
-            print(key, " "*output_space, "u-->:", value)
+            print("\t", key, " "*output_space, "u-->:", value)
 #            print(f"\t^{key}{' '*output_space} u-->: {value}")
         print("")
     else:

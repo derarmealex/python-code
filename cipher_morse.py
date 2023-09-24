@@ -27,9 +27,12 @@ while True:
             f"\n\tPrecyphered : {word}\n"
             f"\tCyphered    : {final}\n"
             )
+# INPUT
+#       Enter a word to cypher in morse code (only letters), or
+#       enter a word in morse code to decipher (only morse letters): leonardo
 # OUTPUT
-#               Precyphered : leonardo
-#               Cyphered    : .-.. . --- -. .- .-. -.. ---
+#       Precyphered : leonardo
+#       Cyphered    : .-.. . --- -. .- .-. -.. ---
     elif set(morse_abc) | set(split_word) == set(morse_abc):    # if there's only morse letters in the word
         split_word = word.split()
         digit_word = []
@@ -46,7 +49,11 @@ while True:
             f"\n\tPrecyphered : {word}\n"
             f"\tCyphered    : {final}\n"
         )
-# OUTPUT        Precyphered : .-.. . --- -. .- .-. -.. ---
-#               Cyphered    : leonardo
+# INPUT
+#       Enter a word to cypher in morse code (only letters), or
+#       enter a word in morse code to decipher (only morse letters): .-.. . --- -. .- .-. -.. ---
+# OUTPUT
+#       Precyphered : .-.. . --- -. .- .-. -.. ---
+#       Cyphered    : leonardo
     else:
-        print("\n\tUse only base letters or only morse characters!\n")
+        print("\n\tUse only base letters, or only morse characters!\n")

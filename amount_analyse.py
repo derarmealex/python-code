@@ -30,9 +30,9 @@ while True:
 # INPUT
 #       Enter an amount to analyze: 123579
 # OUTPUT
-#       50 coins ==> 2471 pc.
-#       20 coins ==> 1 pc.
-#       10 coins ==> 0 pc.
-#       5 coins ==> 1 pc.
-#       2 coins ==> 2 pc.
-#       1 coins ==> 0 pc.
+#       50.coin ==> 2471 pc.
+#       20.coin ==> 1 pc.
+#       10.coin ==> 0 pc.
+#        5.coin ==> 1 pc.
+#        2.coin ==> 2 pc.
+#        1.coin ==> 0 pc.

@@ -2,14 +2,13 @@ while True:
     num_to_ctr = input("Enter a number to count units: ")[::-1].strip()
 # 123579 --> 975321
     if num_to_ctr.isnumeric():
-        num_len = len(num_to_ctr)
         count = {}
         for ix, unit in enumerate(num_to_ctr):
             dict_key = "1" + ("0" * ix)
             count[dict_key] = unit
 #        print(count)
         for key, value in count.items():
-            output_space = num_len - len(key) + 1
+            output_space = len(num_to_ctr) - len(key) + 1
             print("\t^" + key + " "*output_space + "u-*>:", value)
 #            print(f"\t^{key}{' '*output_space} u-*>: {value}")
         print("")

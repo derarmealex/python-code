@@ -30,9 +30,9 @@ while True:
 # INPUT
 #       Enter an amount to analyze: 123579
 # OUTPUT
-#	    50 cent ==> 2471 pc.
-#	    20 cent ==> 1 pc.
-#	    10 cent ==> 0 pc.
-#	     5 cent ==> 1 pc.
-#	     2 cent ==> 2 pc.
-#	     1 cent ==> 0 pc.
+#       50 cent ==> 2471 pc.
+#       20 cent ==> 1 pc.
+#       10 cent ==> 0 pc.
+#       5 cent ==> 1 pc.
+#       2 cent ==> 2 pc.
+#       1 cent ==> 0 pc.

@@ -10,7 +10,7 @@ while True:
         for key, value in count.items():
             output_space = len(num_to_ctr) - len(key) + 1
             print("\t^" + key + " "*output_space + "u-*>:", value)
-#            print(f"\t^{key}{' '*output_space} u-*>: {value}")
+#            print(f"\t^{key}{' '*output_space}u-*>: {value}")
         print("")
     else:
         print("\n\tEnter a number!\n")
@@ -31,15 +31,15 @@ while True:
 #        print(count)
         for key, value in count.items():
             output_space = num_len - len(key) + 1
-#            print("\t^" + key, " "*output_space + "u-*>:", value)
-            print(f"\t^{key}{' '*output_space} u-*>: {value}")
+#            print("\t^" + key + " "*output_space + "u-*>:", value)
+            print(f"\t^{key}{' '*output_space}u-*>: {value}")
         print("")
     else:
         print("\n\tEnter a number!\n")
 # INPUT
 #       Enter a number to count units: 123579
 # OUTPUT
-#       {'1': 9, '10': 7, '100': 5, '1000': 3, '10000': 2, '100000': 1}
+#       {'1': '9', '10': '7', '100': '5', '1000': '3', '10000': '2', '100000': '1'}
 # or
 #       ^1      u-*>: 9
 #       ^10     u-*>: 7

@@ -1,8 +1,8 @@
 while True:
     amount = input("Enter an amount to analyze: ").strip()
     if amount.isnumeric():
-        amount = int(amount)
-        #print(amount)                       # 123579
+        amount = int(amount)                # 123579
+        #print(amount)
         d50 = amount // 50
         print("\t50 cent ==>", d50, "pc.")
         amount = amount % 50                # 29

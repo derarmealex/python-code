@@ -28,11 +28,11 @@ while True:
         for ix, letter in abc:
             if letter in word:
                 word_digit.append(ix + move)
-#       print(word_digit)
+#        print(word_digit)
         cyph_word = str(bytearray(word_digit))
-#       print(cyph_word)
-#       q = cyph_word[len("bytearray(b'"):-2]
-#       print(q)
+#        print(cyph_word)
+#        q = cyph_word[len("bytearray(b'"):-2]
+#        print(q)
         cyph_word = ''.join([num for num in cyph_word if num.isnumeric()])
         print(cyph_word)
     else:

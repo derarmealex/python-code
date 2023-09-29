@@ -8,9 +8,7 @@ while True:
             count[dict_key] = int(unit)
 #        print(count)
         for key, value in count.items():
-            output_space = len(num_to_ctr) - len(key) + 1
-            print("\t^" + key + " "*output_space + "u-*>:", value)
-#            print(f"\t^{key}{' '*output_space}u*->: {value}")
+            print(f"\t^{key:{len(num_to_ctr)}} u*->: {value}")
         print("")
     else:
         print("\n\tEnter a number!\n")
@@ -30,9 +28,7 @@ while True:
             num_to_ctr = next_step
 #        print(count)
         for key, value in count.items():
-            output_space = num_len - len(key) + 1
-#            print("\t^" + key + " "*output_space + "u*->:", value)
-            print(f"\t^{key}{' '*output_space}u-*>: {value}")
+            print(f"\t^{key:{len(num_to_ctr)}} u*->: {value}")
         print("")
     else:
         print("\n\tEnter a number!\n")

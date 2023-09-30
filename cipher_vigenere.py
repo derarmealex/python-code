@@ -1,7 +1,7 @@
 # WITHOUT ENCODING
 while True:
-    word = input("Enter a word to cypher     (only letters): ")[::-1].lower().strip()
-    pas  = input("Enter a password to cypher (only letters): ").lower().strip()
+    word = input("Enter a word to cypher     (only letters): ")[::-1].strip().lower()
+    pas  = input("Enter a password to cypher (only letters): ").strip().lower()
     if word.isalpha() and pas.isalpha():
         pad_pas = ""
         while len(word) > len(pad_pas):
@@ -34,8 +34,8 @@ while True:
         print("\n\tUse only base letters!\n")
 # STANDARD
 while True:
-    word = input("Enter a word to cypher         (only letters): ").lower().strip()
-    pas  = input("Enter a password for cyphering (only letters): ").lower().strip()
+    word = input("Enter a word to cypher         (only letters): ").strip().lower()
+    pas  = input("Enter a password for cyphering (only letters): ").strip().lower()
     if word.isalpha() and pas.isalpha():
         pad_pas = ""
         while len(word) > len(pad_pas):

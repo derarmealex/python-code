@@ -26,7 +26,7 @@ while True:
         d1 = amount // 1
         print("\t 1.coin ==>", d1, "pc.\n")
     else:
-        print("\n\tEnter a number!\n")
+        print("\n\tEnter a correct amount!\n")
 # INPUT
 #       Enter an amount to analyze: 123579
 # OUTPUT

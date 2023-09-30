@@ -9,7 +9,7 @@ while True:
     word = input(
                 "Enter a word to cypher in morse code (only letters), or \n"
                 "enter a word in morse code to decipher (only morse letters): "
-                ).lower().strip()
+                ).strip().lower()
     split_word = word.split()                                   # for converting to regular ABC
     if word.isalpha():
 # 'leonardo'

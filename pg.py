@@ -1,22 +1,6 @@
 a = ""
 b = ""
 for x, y in zip(a, b): print(x + y, end='')
-"""
-def pp(x):
-    for ix, item in stg:
-        if item in x:
-            final.append(ix + move)
-
-
-while True:
-    move = 
-    stg = 'abcdefghijklmnopqrstuvwxyz'
-    stg = enumerate(stg)
-    final = []
-    pp(input('Enter a word...  ').lower().strip())
-    q = str(bytearray(final))
-    print(q[len("bytearray(b'"):-2])
-"""
 # or
 move =
 abc = 'abcdefghijklmnopqrstuvwxyz'

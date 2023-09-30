@@ -1,26 +1,26 @@
 while True:
-    word = str(input("Enter any value: ")).strip().casefold()
+    word = str(input("Enter a value to check for palindrome: ")).strip().casefold()
     if word == word[::-1]:
-        print("Palindrome")
+        print("\tPalindrome\n")
     else:
-        print("Not palindrome")
+        print("\tNot palindrome\n")
 # or
 while True:
-    word = str(input("Enter any value: ")).strip().casefold()
+    word = str(input("Enter a value to check for palindrome: ")).strip().casefold()
     if word == reversed(word):
-        print("Palindrome")
+        print("\tPalindrome\n")
     else:
-        print("Not palindrome")
+        print("\tNot palindrome\n")
 # or
 while True:
-    word = str(input("Enter any value: ")).strip().casefold()
+    word = str(input("Enter a value to check for palindrome: ")).strip().casefold()
     x = len(word) - 1
     i = 0
     while x - i >= i:
         if word[x - i] == word[i]:
             i += 1
         else:
-            print("Not paiindrome")
+            print("\tNot paiindrome\n")
             break
-        print("Palindrome")
+        print("\tPalindrome\n")
         break

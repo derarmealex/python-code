@@ -12,8 +12,7 @@ while main_ctr:
     else:
         collection.append(num)
 #        print("\n\tYour collection to process:", collection, "\n")
-        oper_ctr = True
-        while oper_ctr:
+        while True:
             print("\tYour collection to process:", collection, "")
             oper = input(
                         'Summation     : "+"\n'
@@ -28,14 +27,15 @@ while main_ctr:
             if oper == "+" or oper == "-" or oper == "*" or oper == "/" or oper == "^":
                 collection.append(oper)
                 print("\tYour collection to process now:", collection, "\n")
-                oper_ctr = False
+                break
             elif oper == "start":
                 main_ctr = False
                 break
             else:
                 print(f"\tWrong operator! --> ({oper}) <-- Try again")
 # Your collection to process: [1.0, '+', 2.0, '^', 2.0, '-', -3.0, '*', 0.1, '/', 99.0, '^', 2.5]
-print(" ".join([str(x) for x in collection]))
+fin_col = " ".join([str(x) for x in collection])
+print(fin_col)
 # [1.0, '+', 2.0, '^', 2.0, '-', -3.0, '*', 0.1, '/', 99.0, '^', 2.5]
 collection = [1.0, '+', 2.0, '^', 2.0, '-', -3.0, '*', 0.1, '/', 99.0, '^', 2.5]
 col = collection

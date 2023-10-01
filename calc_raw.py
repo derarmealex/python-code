@@ -1,11 +1,12 @@
 collection = []
 # [1.0, '+', 2.0, '-', -3.0, '*', 0.1, '/', 99.0, '^', 2.5]
-while True:
+ctr = True
+while ctr:
     try:
         num = float(input("Enter [next] number to calculate: "))
         print("")
     except ValueError:
-        print(f"\n\tIncorrect item! Try again")
+        print(f"\n\tIncorrect number! Try again")
         print("\tYour collection to process:", collection)
         continue
     else:
@@ -22,66 +23,148 @@ while True:
                         'Exponentiation: "^"\n'
                         '-------------------\n'
                         "Enter operator, or print 'start' to stop input and start calculating: "
-                        ).strip()
+                        ).strip().lower()
             print("")
             if oper == "+" or oper == "-" or oper == "*" or oper == "/" or oper == "^":
                 collection.append(oper)
                 print("\tYour collection to process now:", collection, "\n")
                 oper_ctr = False
-#            elif oper != "+" and oper != "-" and oper != "*" and oper != "/" and oper != "^":
+            elif oper == "start":
+                ctr = False
+                break
             else:
                 print(f"\tWrong operator! --> ({oper}) <-- Try again")
-                oper_ctr = True
 # Your collection to process: [1.0, '+', 2.0, '-', -3.0, '*', 0.1, '/', 99.0, '^', 2.5]
+print(" ".join([str(x) for x in collection]))
+# 1.0 + 2.0 ** 2 --3.0 * 0.1 / 99.0 ** 2.5
+collection = [1.0, '+', 2.0, '^', 2.0, '-', -3.0, '*', 0.1, '/', 99.0, '^', 2.5]
+col = collection
+copy_col = col.copy()
+# [(0, 1.0), (1, '+'), (2, 2.0), (3, '^'), (4, 2.0), (5, '-'), (6, -3.0), (7, '*'), (8, 0.1), (9, '/'), (10, 99.0), (11, '^'), (12, 2.5)]
+if "^" in col:
+    step = 0
+    for ix, item in enumerate(col):
+        if item == "^":                 # (3, '^')  #(11, '^')
+#            print(ix)
+            p = col[ix - 1]             # 2.0       # 99.0
+#            print(p)
+            ow = col[ix + 1]            # 2.0       # 2.5
+#            print(ow)
+# [1.0, '+', 2.0, '^', 2.0, '-', -3.0, '*', 0.1, '/', 99.0, '^', 2.5]
+# [1.0, '+', 4.0, '-', -3.0, '*', 0.1, '/', 99.0, '^', 2.5]
+#            print(copy_col)
+            temp_slice = copy_col[:ix-step]
+            temp_slice2 = copy_col[ix+2-step:]
+            copy_col = temp_slice + temp_slice2
+# [1.0, '+', 2.0, '-', -3.0, '*', 0.1, '/', 99.0, '^', 2.5]
+# [1.0, '+', 4.0, '-', -3.0, '*', 0.1, '/', 99.0]
+#            print(copy_col)
+            pow_res = p ** ow           # 4.0       # 97518.71871081983
+#            print(pow_res)
+            copy_col[ix - 1-step] = pow_res
+# [1.0, '+', 4.0, '-', -3.0, '*', 0.1, '/', 99.0, '^', 2.5]
+# [1.0, '+', 4.0, '-', -3.0, '*', 0.1, '/', 97518.71871081983]
+#            print(copy_col)
+            step += 2
+print(copy_col)
+
+if "/" in col:
+    for ix, item in enumerate(col):
+        if item == "^":
+            p = col[ix - 1]             # 2.0   # 99.0
+#if *
 
 
-#plus(ent)
+print(col)
+# [1.0, '+', 2.0, '^', 2.0, '-', -3.0, '*', 0.1, '/', 99.0, '^', 2.5]
 
-
-"""
-def plus(*x):
-    return f"\tSum of numbers -->{x}--> is ==>({sum(x)})<==\n"
-# Sum of numbers -->(1, 2, -3, 4, -5)--> is ==>(-1)<==
-
-
-def minus(*x):
-    x = [-x for x in x]
-# [-1, -2, 3, -4, 5]
-    x[0] = -x[0]
-# [1, -2, 3, -4, 5]
-    return f"\tDifference of numbers -->{x}--> is ==>({sum(x)})<==\n"
-# Difference of numbers -->[1, -2, 3, -4, 5]--> is ==>(3)<==
-
-
-def mult(*x):
-    num = x[0]
-    i = 0
-    while i < len(x) - 1:
-        num = num * x[i + 1]
-        i += 1
-    return f"\tProduct of numbers -->{x}--> is ==>({num})<==\n"
-# Product of numbers -->(1, 2, -3, 4, -5)--> is ==>(120)<==
-
-
-def divis(*x):
-    num = x[0]
-    i = 0
-    while i < len(x) - 1:
-        num = num / x[i + 1]
-        i += 1
-    return f"\tQuotient of numbers -->{x}--> is ==>({num})<==\n"
-# Quotient of numbers -->(1, 2, -3, 4, -5)--> is ==>(120)<==
-
-
-def expon(x, n):
-    num = pow(x, n)
-    return f"\t{n} ** {x} = {num}\n"
-# -3 ** 2 = 0.125
-
-
-print(plus(1, 2, -3, 4, -5))
-print(minus(1, 2, -3, 4, -5))
-print(mult(1, 2, -3, 4, -5))
-print(divis(1, 2, -3, 4, -5))
-print(expon(2, -3))
-"""
+# ANCIENT
+while True:
+    print(
+        'Summation:             "+"\n'
+        'Subtraction:           "-"\n'
+        'Multiplication:        "*"\n'
+        'Division:              "/"\n'
+        'Exponentiation:        "^"\n'
+        '--------------------------'
+        )
+    oper = input("Choose the operation     : ")
+    try:
+        num1 = float(input("Enter your first number  : "))
+        num2 = float(input("Enter your second number : "))
+    except ValueError:
+        print("\n\tEnter a correct number!\n")
+        continue
+    match oper:
+        case "+":
+            print(f"\t{float(num1)} + {float(num2)} = {float(num1) + float(num2)}\n")
+        case "-":
+            print(f"\t{float(num1)} - {float(num2)} = {float(num1) - float(num2)}\n")
+        case "*":
+            print(f"\t{float(num1)} * {float(num2)} = {float(num1) * float(num2)}\n")
+        case "/":
+            try:
+                print(f"\t{float(num1)} / {float(num2)} = {float(num1) / float(num2)}\n")
+            except (ZeroDivisionError):
+                print("\n\tCouldn't be divided by 0! Enter a correct number\n")
+        case "^":
+            print(f"\t{float(num1)} ^ {float(num2)} = {float(num1) ** float(num2)}\n")
+        case _:
+            print(f"\n\tWrong operator! --> ({oper}) <-- Try again\n")
+# or
+from re import findall
+while True:
+    print(
+        'Summation:             "+"\n'
+        'Subtraction:           "-"\n'
+        'Multiplication:        "*"\n'
+        'Division:              "/"\n'
+        'Exponentiation:        "^"\n'
+        '--------------------------'
+        )
+    oper = input("Choose the operation     : ").strip()
+    while oper:
+        num1 = input("Enter your first number  : ").strip()
+        num2 = input("Enter your second number : ").strip()
+        if findall('[^.\d-]', num1) or findall('[^.\d-]', num2) \
+                or num1 == '.' or num2 == '.' \
+                or num1 == '-' or num2 == '-' \
+                or num1 in '' or num2 in '':
+            print("\n\tEnter a correct number!\n")
+            continue
+        elif oper == "+":
+            print(f"\t{float(num1)} + {float(num2)} = {float(num1) + float(num2)}\n")
+        elif oper == "-":
+            print(f"\t{float(num1)} - {float(num2)} = {float(num1) - float(num2)}\n")
+        elif oper == "*":
+            print(f"\t{float(num1)} * {float(num2)} = {float(num1) * float(num2)}\n")
+        elif oper == "/":
+            try:
+                print(f"\t{float(num1)} / {float(num2)} = {float(num1) / float(num2)}\n")
+            except (ZeroDivisionError):
+                print("\n\tCouldn't be divided by 0! Enter a correct number\n")
+        elif oper == "^":
+            print(f"\t{float(num1)} ^ {float(num2)} = {float(num1) ** float(num2)}\n")
+        else:
+            print(f"\n\tWrong operator! --> ({oper}) <-- Try again\n")
+        while True:
+            goon = input("\nLike to do another operation?('y' for 'Yes', any other key for 'No'): ").lower().strip()
+            if goon == 'y':
+                oper = False
+                break
+            print("\n\tSee ya again!")
+            exit()
+# INPUT
+#       Summation:             "+"
+#       Subtraction:           "-"
+#       Multiplication:        "*"
+#       Division:              "/"
+#       Exponentiation:        "^"
+#       --------------------------
+#       Choose the operation     : ^
+#       Enter your first number  : 3
+#       Enter your second number : 2
+# OUTPUT
+#       3.0 ^ 2.0 = 9.0
+#       Like to do another operation?('y' for 'Yes', any other key for 'No'): n
+#       See ya again!

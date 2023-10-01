@@ -37,7 +37,7 @@ while main_ctr:
 # Your collection to process: [1.0, '+', 2.0, '^', 2.0, '-', -3.0, '*', 0.1, '/', 99.0, '^', 2.5]
 fin_col = " ".join([str(x) for x in collection])
 print(fin_col)
-# [1.0, '+', 2.0, '^', 2.0, '-', -3.0, '*', 0.1, '/', 99.0, '^', 2.5]
+# 1.0 + 2.0 ^ 2.0 - -3.0 * 0.1 / 99.0 ^ 2.5
 collection = [1.0, '+', 2.0, '^', 2.0, '-', -3.0, '*', 0.1, '/', 99.0, '^', 2.5]
 col = collection
 copy_col = col.copy()

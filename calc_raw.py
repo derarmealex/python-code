@@ -1,5 +1,5 @@
 collection = []
-# [1.0, '+', 2.0, '-', -3.0, '*', 0.1, '/', 99.0, '^', 2.5]
+# [1.0, '+', 2.0, '^', 2.0, '-', -3.0, '*', 0.1, '/', 99.0, '^', 2.5]
 ctr = True
 while ctr:
     try:
@@ -34,9 +34,9 @@ while ctr:
                 break
             else:
                 print(f"\tWrong operator! --> ({oper}) <-- Try again")
-# Your collection to process: [1.0, '+', 2.0, '-', -3.0, '*', 0.1, '/', 99.0, '^', 2.5]
+# Your collection to process: [1.0, '+', 2.0, '^', 2.0, '-', -3.0, '*', 0.1, '/', 99.0, '^', 2.5]
 print(" ".join([str(x) for x in collection]))
-# 1.0 + 2.0 ** 2 --3.0 * 0.1 / 99.0 ** 2.5
+# [1.0, '+', 2.0, '^', 2.0, '-', -3.0, '*', 0.1, '/', 99.0, '^', 2.5]
 collection = [1.0, '+', 2.0, '^', 2.0, '-', -3.0, '*', 0.1, '/', 99.0, '^', 2.5]
 col = collection
 copy_col = col.copy()

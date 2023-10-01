@@ -1,7 +1,7 @@
 collection = []
 # [1.0, '+', 2.0, '^', 2.0, '-', -3.0, '*', 0.1, '/', 99.0, '^', 2.5]
-ctr = True
-while ctr:
+main_ctr = True
+while main_ctr:
     try:
         num = float(input("Enter [next] number to calculate: "))
         print("")
@@ -30,7 +30,7 @@ while ctr:
                 print("\tYour collection to process now:", collection, "\n")
                 oper_ctr = False
             elif oper == "start":
-                ctr = False
+                main_ctr = False
                 break
             else:
                 print(f"\tWrong operator! --> ({oper}) <-- Try again")

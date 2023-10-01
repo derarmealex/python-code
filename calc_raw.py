@@ -21,7 +21,7 @@ while main_ctr:
                         'Division      : "/"\n'
                         'Exponentiation: "^"\n'
                         '-------------------\n'
-                        "Enter operator, or print 'start' to stop input and start calculating: "
+                        "Enter operator, or print 'start' to break input and start calculating: "
                         ).strip().lower()
             print("")
             if oper == "+" or oper == "-" or oper == "*" or oper == "/" or oper == "^":
@@ -33,6 +33,7 @@ while main_ctr:
                 break
             else:
                 print(f"\tWrong operator! --> ({oper}) <-- Try again")
+#print("\tYour collection to process:", collection)
 # Your collection to process: [1.0, '+', 2.0, '^', 2.0, '-', -3.0, '*', 0.1, '/', 99.0, '^', 2.5]
 fin_col = " ".join([str(x) for x in collection])
 print(fin_col)

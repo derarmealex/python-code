@@ -10,7 +10,7 @@ while ctr:
         print("\tYour collection to process:", collection)
         continue
     else:
-        collection.append(float(num))
+        collection.append(num)
 #        print("\n\tYour collection to process:", collection, "\n")
         oper_ctr = True
         while oper_ctr:

@@ -20,7 +20,7 @@ while main_ctr:
                         'Division      : "/"\n'
                         'Exponentiation: "^"\n'
                         '-------------------\n'
-                        "Enter operator, or print 'start' to break input and start calculating: "
+                        "Select operator, or print 'start' to break input and start calculating: "
                         ).strip().lower()
             print("")
             if oper == "+" or oper == "-" or oper == "*" or oper == "/" or oper == "^":

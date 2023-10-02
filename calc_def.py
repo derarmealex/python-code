@@ -60,7 +60,7 @@ while main_ctr:
         print("")
     except ValueError:
         print(f"\n\tIncorrect number! Try again")
-        print("\tYour collection to process:", collection)
+        print("\tYour collection to process now:", collection)
         continue
     else:
         collection.append(num)

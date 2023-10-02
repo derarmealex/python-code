@@ -35,7 +35,7 @@ while main_ctr:
             else:
                 print(f"\tWrong operator! --> ({oper}) <-- Try again")
 fin_col = " ".join([str(x) for x in collection])
-# 9.0 ^ 2.0 + 1 - 3.5 * 0.0 / 2.0 ^ 5.0 * 7.0 * 10.0
+# 9.0 ^ 2.0 + 1 - 3.5 * 0.0 / 2.0 ^ 5.0 * 7.0 * 10.0 = ?
 #print(fin_col)
 col = collection
 # [9.0, '^', 2.0, '+', 1, '-', 3.5, '*', 0.0, '/', 2.0, '^', 5.0, '*', 7.0, '*', 10.0]
@@ -89,9 +89,9 @@ if "/" in col:
 # [81.0, '+', 1, '-', 3.5, '*', 0.0, '/', 32.0, '*', 7.0, '*', 10.0]
 #            print(col)
             try:
-                div_res = num1 / num2              # 0.0
+                div_res = num1 / num2
             except ZeroDivisionError:
-                print("\n\tCouldn't be divided by 0! Expression has no solution\n")
+                print(f"\n\t{num1} / {num2} --> couldn't be divided by 0! Expression has no solution\n")
                 exit()
 #            print(div_res)
             col[ix - 1] = div_res

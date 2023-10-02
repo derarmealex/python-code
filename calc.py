@@ -101,7 +101,6 @@ if "+" in col:
             num2 = col[ix + 1]
             sum_res = num1 + num2
             col[ix - 1] = sum_res
-
             temp_slice = col[:ix]
             temp_slice2 = col[ix + 2:]
             col = temp_slice + temp_slice2

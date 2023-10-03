@@ -1,3 +1,4 @@
+# I
 while True:
     print("The form of equation: ax^2+bx+c=0")
     try:
@@ -21,7 +22,7 @@ while True:
                 print(f"\n\tThe equation has two roots:\n\t{x1}\n\t{x2}\n")
         else:
             print('\n\tIt is not a quadratic equation!\n')
-# or
+# II
 from re import findall
 while True:
     print("The form of equation: ax^2+bx+c=0")

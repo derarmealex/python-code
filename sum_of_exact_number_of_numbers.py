@@ -1,3 +1,4 @@
+# II
 while True:
     try:
         num_to_sum = int(input("Enter a number to count sum of its digits : "))
@@ -19,7 +20,7 @@ while True:
 #       Number: 12345 |==> Sum of its first 3 digits: 6
 
 
-# or
+# I
 def summus(nums_to_sum, index):
     summ = [0 + number for ix, number in enumerate(nums_to_sum) if ix < index]
     return f"\n\tNumber: {num_to_sum} |==> Sum of its first {index} digits: {sum(summ)}\n"
@@ -29,7 +30,7 @@ print(summus([1, 2, 3, 4, 5], 3))
 # Number: 12345 |==> Sum of its first 3 digits: 6
 
 
-# or
+# III
 def summus(nums_to_sum, index):
     summ = 0
     ix = 0

@@ -1,3 +1,4 @@
+# I
 for number in range(1, 101):
     if number % 15 == 0:
         print("FizzBuzz")
@@ -7,7 +8,7 @@ for number in range(1, 101):
         print("Buzz")
     else:
         print(number)
-# or
+# II
 final = [1]
 for number in final:
     if number < 100:
@@ -20,7 +21,7 @@ for split in final:
     elif split % 5 == 0:
         split = "Buzz"
     print(split)
-# or
+# III
 final = 1
 while final < 101:
     if final % 15 == 0:

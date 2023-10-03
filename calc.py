@@ -1,3 +1,4 @@
+# I
 num1 = ""
 while not num1:
     try:
@@ -41,7 +42,7 @@ while True:
             num1 = float(num1) ** float(num2)
         case _:
             print(f"\n\tWrong operator selected! --> ({oper}) <-- Try again\n")
-# or
+# II
 from re import findall
 num1 = ""
 while not num1:
@@ -83,18 +84,3 @@ while True:
         num1 = float(num1) ** float(num2)
     else:
         print(f"\n\tWrong operator selected! --> ({oper}) <-- Try again\n")
-
-# INPUT
-#       Summation:             "+"
-#       Subtraction:           "-"
-#       Multiplication:        "*"
-#       Division:              "/"
-#       Exponentiation:        "^"
-#       --------------------------
-#       Choose the operation     : ^
-#       Enter your first number  : 3
-#       Enter your second number : 2
-# OUTPUT
-#       3.0 ^ 2.0 = 9.0
-#       Like to do another operation?('y' for 'Yes', any other key for 'No'): n
-#       See ya again!

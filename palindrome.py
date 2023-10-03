@@ -1,17 +1,18 @@
+# I
 while True:
     word = str(input("Enter a value to check for palindrome: ")).strip().casefold()
     if word == word[::-1]:
         print("\tPalindrome\n")
     else:
         print("\tNot palindrome\n")
-# or
+# II
 while True:
     word = str(input("Enter a value to check for palindrome: ")).strip().casefold()
     if word == reversed(word):
         print("\tPalindrome\n")
     else:
         print("\tNot palindrome\n")
-# or
+# III
 while True:
     word = str(input("Enter a value to check for palindrome: ")).strip().casefold()
     x = len(word) - 1

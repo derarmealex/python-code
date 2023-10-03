@@ -1,3 +1,4 @@
+# I
 while True:
     try:
         m = float(input("Enter mass of body in kg   : "))
@@ -27,7 +28,7 @@ while True:
                 print("\tIt's obese (class II)\n")
             elif calc >= 40.0:
                 print("\tIt's obese (class III)\n")
-# or
+# II
 from re import findall
 while True:
     m = input("Enter mass of body in kg   : ").strip()

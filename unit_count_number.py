@@ -1,3 +1,4 @@
+# I
 while True:
     num_to_ctr = input("Enter a number to count its units: ").strip()
     num_to_ctr = num_to_ctr[::-1]
@@ -13,7 +14,7 @@ while True:
         print("")
     else:
         print("\n\tEnter a number!\n")
-# or
+# II
 while True:
     num_to_ctr = input("Enter a number to count its units: ").strip()
 # 123579

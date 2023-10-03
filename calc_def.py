@@ -48,3 +48,48 @@ def expon(x, n):
 # Quotient of numbers -->(1, 2, -3, 4, -5)--> is ==>(120)<==
 #print(expon(2, -3))
 # -3 ** 2 = 0.125
+
+
+num1 = ""
+while not num1:
+    try:
+        num1 = float(input("Enter your first number : "))
+    except ValueError:
+        print("\n\tIncorrect number! Try again\n")
+while True:
+    print(
+        'Summation:            "+"\n'
+        'Subtraction:          "-"\n'
+        'Multiplication:       "*"\n'
+        'Division:             "/"\n'
+        'Exponentiation:       "^"\n'
+        '-------------------------\n'
+        '\tYour expression to process now:', num1
+        )
+    oper = input("Choose the operation    : ")
+    try:
+        num2 = float(input("Enter your second number: "))
+    except ValueError:
+        print("\n\tIncorrect number! Try again\n")
+        continue
+    match oper:
+        case "+":
+            print(f"\n\t{float(num1)} + {float(num2)} = {plus(num1, num2)}\n")
+            num1 = float(num1) + float(num2)
+        case "-":
+            print(f"\n\t{float(num1)} - {float(num2)} = {minus(num1, num2)}\n")
+            num1 = float(num1) - float(num2)
+        case "*":
+            print(f"\n\t{float(num1)} * {float(num2)} = {mult(num1, num2)}\n")
+            num1 = float(num1) * float(num2)
+        case "/":
+            try:
+                print(f"\n\t{float(num1)} / {float(num2)} = {divis(num1, num2)}\n")
+            except ZeroDivisionError:
+                print("\n\tCouldn't be divided by 0! Enter a correct number\n")
+            num1 = float(num1) / float(num2)
+        case "^":
+            print(f"\n\t{float(num1)} ^ {float(num2)} = {expon(num1, num2)}\n")
+            num1 = float(num1) ** float(num2)
+        case _:
+            print(f"\n\tWrong operator selected! --> ({oper}) <-- Try again\n")

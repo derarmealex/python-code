@@ -4,12 +4,12 @@ while True:
     num_to_ctr = num_to_ctr[::-1]
 # 123579 --> 975321
     if num_to_ctr.isnumeric():
-        count = {}
+        counts = {}
         for ix, unit in enumerate(num_to_ctr):
             dict_key = "1" + ("0" * ix)
-            count[dict_key] = int(unit)
-#        print("\n\t", count)
-        for key, value in count.items():
+            counts[dict_key] = int(unit)
+#        print("\n\t", counts)
+        for key, value in counts.items():
             print(f"\t^{key:{len(num_to_ctr)}} u*->: {value}")
         print("")
     else:
@@ -21,15 +21,15 @@ while True:
     if num_to_ctr.isnumeric():
         num_len = len(num_to_ctr)
         num_to_ctr = int(num_to_ctr)
-        count = {}
+        counts = {}
         for step in range(num_len):
             unit = num_to_ctr % 10
             dict_key = "1" + ("0" * step)
-            count[dict_key] = unit
+            counts[dict_key] = unit
             next_step = num_to_ctr // 10
             num_to_ctr = next_step
-#        print("\n\t", count)
-        for key, value in count.items():
+#        print("\n\t", counts)
+        for key, value in counts.items():
             print(f"\t^{key:{len(num_to_ctr)}} u*->: {value}")
         print("")
     else:

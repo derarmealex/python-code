@@ -1,110 +1,97 @@
-# 9.0 ^ 2.0 + 1 - 3.5 * 0.0 / 2.0 ^ 5.0 * 7.0 * 10.0 = 82.0
-collection = []
-main_ctr = True
-while main_ctr:
+while True:
     try:
-        num = float(input("Enter [next] number to calculate: "))
+        num1 = float(input("Enter your first number  : "))
         print("")
+        break
     except ValueError:
         print(f"\n\tIncorrect number! Try again")
-        print("\tYour collection to process now:", collection)
         continue
-    else:
-        collection.append(num)
-        while True:
-            print("\tYour collection to process:", collection, "")
-            oper = input(
-                        'Summation     : "+"\n'
-                        'Subtraction   : "-"\n'
-                        'Multiplication: "*"\n'
-                        'Division      : "/"\n'
-                        'Exponentiation: "^"\n'
-                        '-------------------\n'
-                        "Select operator, or print 'start' to break input and start calculating: "
-                        ).strip().lower()
-            print("")
-            if oper == "+" or oper == "-" or oper == "*" or oper == "/" or oper == "^":
-                collection.append(oper)
-                print("\tYour collection to process now:", collection, "\n")
-                break
-            elif oper == "start":
-                main_ctr = False
-                break
-            else:
-                print(f"\tWrong operator! --> ({oper}) <-- Try again")
-fin_col = " ".join([str(x) for x in collection])
-# 9.0 ^ 2.0 + 1 - 3.5 * 0.0 / 2.0 ^ 5.0 * 7.0 * 10.0 = ?
-print(fin_col + " = ?")
-col = collection
-index_move = 0
-if "^" in col:
-    for ix, item in enumerate(col):
-        if item == "^":
-            ix -= index_move
-            num1 = col[ix - 1]
-            num2 = col[ix + 1]
-            pow_res = num1 ** num2
-            col[ix - 1] = pow_res
-            temp_slice = col[:ix]
-            temp_slice2 = col[ix + 2:]
-            col = temp_slice + temp_slice2
-            index_move += 2
-index_move = 0
-if "/" in col:
-    for ix, item in enumerate(col):
-        if item == "/":
-            ix -= index_move
-            num1 = col[ix - 1]
-            num2 = col[ix + 1]
+print(num1)
+while True:
+    print(
+        'Summation:             "+"\n'
+        'Subtraction:           "-"\n'
+        'Multiplication:        "*"\n'
+        'Division:              "/"\n'
+        'Exponentiation:        "^"\n'
+        '--------------------------'
+        )
+    oper = input("Choose the operation     : ")
+    try:
+        num2 = float(input("Enter your second number : "))
+    except ValueError:
+        print("\n\tEnter a correct number!\n")
+        continue
+    match oper:
+        case "+":
+            print(f"\t{float(num1)} + {float(num2)} = {float(num1) + float(num2)}\n")
+        case "-":
+            print(f"\t{float(num1)} - {float(num2)} = {float(num1) - float(num2)}\n")
+        case "*":
+            print(f"\t{float(num1)} * {float(num2)} = {float(num1) * float(num2)}\n")
+        case "/":
             try:
-                div_res = num1 / num2
+                print(f"\t{float(num1)} / {float(num2)} = {float(num1) / float(num2)}\n")
             except ZeroDivisionError:
-                print(f"\n\t{num1} / {num2} --> couldn't be divided by 0! Expression has no solution\n")
-                exit()
-            col[ix - 1] = div_res
-            temp_slice = col[:ix]
-            temp_slice2 = col[ix + 2:]
-            col = temp_slice + temp_slice2
-            index_move += 2
-index_move = 0
-if "*" in col:
-    for ix, item in enumerate(col):
-        if item == "*":
-            ix -= index_move
-            num1 = col[ix - 1]
-            num2 = col[ix + 1]
-            mult_res = num1 * num2
-            col[ix - 1] = mult_res
-            temp_slice = col[:ix]
-            temp_slice2 = col[ix + 2:]
-            col = temp_slice + temp_slice2
-            index_move += 2
-index_move = 0
-if "-" in col:
-    for ix, item in enumerate(col):
-        if item == "-":
-            ix -= index_move
-            num1 = col[ix - 1]
-            num2 = col[ix + 1]
-            sub_res = num1 - num2
-            col[ix - 1] = sub_res
-            temp_slice = col[:ix]
-            temp_slice2 = col[ix + 2:]
-            col = temp_slice + temp_slice2
-            index_move += 2
-index_move = 0
-if "+" in col:
-    for ix, item in enumerate(col):
-        if item == "+":
-            ix -= index_move
-            num1 = col[ix - 1]
-            num2 = col[ix + 1]
-            sum_res = num1 + num2
-            col[ix - 1] = sum_res
-            temp_slice = col[:ix]
-            temp_slice2 = col[ix + 2:]
-            col = temp_slice + temp_slice2
-            index_move += 2
-result = col[0]
-print(f"\n\t{fin_col} = {result}\n")
-# 9.0 ^ 2.0 + 1 - 3.5 * 0.0 / 2.0 ^ 5.0 * 7.0 * 10.0 = 82.0
+                print("\n\tCouldn't be divided by 0! Enter a correct number\n")
+        case "^":
+            print(f"\t{float(num1)} ^ {float(num2)} = {float(num1) ** float(num2)}\n")
+        case _:
+            print(f"\n\tWrong operator! --> ({oper}) <-- Try again\n")
+# or
+from re import findall
+while True:
+    print(
+        'Summation:             "+"\n'
+        'Subtraction:           "-"\n'
+        'Multiplication:        "*"\n'
+        'Division:              "/"\n'
+        'Exponentiation:        "^"\n'
+        '--------------------------'
+        )
+    oper = input("Choose the operation     : ").strip()
+    while oper:
+        num1 = input("Enter your first number  : ").strip()
+        num2 = input("Enter your second number : ").strip()
+        if findall('[^.\d-]', num1) or findall('[^.\d-]', num2) \
+                or num1 == '.' or num2 == '.' \
+                or num1 == '-' or num2 == '-' \
+                or num1 in '' or num2 in '':
+            print("\n\tEnter a correct number!\n")
+            continue
+        elif oper == "+":
+            print(f"\t{float(num1)} + {float(num2)} = {float(num1) + float(num2)}\n")
+        elif oper == "-":
+            print(f"\t{float(num1)} - {float(num2)} = {float(num1) - float(num2)}\n")
+        elif oper == "*":
+            print(f"\t{float(num1)} * {float(num2)} = {float(num1) * float(num2)}\n")
+        elif oper == "/":
+            try:
+                print(f"\t{float(num1)} / {float(num2)} = {float(num1) / float(num2)}\n")
+            except ZeroDivisionError:
+                print("\n\tCouldn't be divided by 0! Enter a correct number\n")
+        elif oper == "^":
+            print(f"\t{float(num1)} ^ {float(num2)} = {float(num1) ** float(num2)}\n")
+        else:
+            print(f"\n\tWrong operator! --> ({oper}) <-- Try again\n")
+        while True:
+            goon = input("\nLike to do another operation?('y' for 'Yes', any other key for 'No'): ").lower().strip()
+            if goon == 'y':
+                oper = False
+                break
+            print("\n\tSee ya again!")
+            exit()
+# INPUT
+#       Summation:             "+"
+#       Subtraction:           "-"
+#       Multiplication:        "*"
+#       Division:              "/"
+#       Exponentiation:        "^"
+#       --------------------------
+#       Choose the operation     : ^
+#       Enter your first number  : 3
+#       Enter your second number : 2
+# OUTPUT
+#       3.0 ^ 2.0 = 9.0
+#       Like to do another operation?('y' for 'Yes', any other key for 'No'): n
+#       See ya again!

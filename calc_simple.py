@@ -35,7 +35,7 @@ while True:
             try:
                 print(f"\n\t{float(num1)} / {float(num2)} = {float(num1) / float(num2)}\n")
             except ZeroDivisionError:
-                print("\n\tCouldn't be divided by 0! Enter a correct number\n")
+                print("\n\tCouldn't be divided by 0! Enter a correct divisor\n")
             num1 = float(num1) / float(num2)
         case "^":
             print(f"\n\t{float(num1)} ^ {float(num2)} = {float(num1) ** float(num2)}\n")
@@ -77,7 +77,7 @@ while True:
         try:
             print(f"\n\t{float(num1)} / {float(num2)} = {float(num1) / float(num2)}\n")
         except ZeroDivisionError:
-            print("\n\tCouldn't be divided by 0! Enter a correct number\n")
+            print("\n\tCouldn't be divided by 0! Enter a correct divisor\n")
         num1 = float(num1) / float(num2)
     elif oper == "^":
         print(f"\n\t{float(num1)} ^ {float(num2)} = {float(num1) ** float(num2)}\n")

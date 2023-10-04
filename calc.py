@@ -47,7 +47,7 @@ from re import findall
 num1 = ""
 while not num1:
     num1 = input("Enter your first number : ")
-    if findall('[^.\d-]', num1) or num1 == '.' or num1 == '-' or num1 in '' :
+    if findall('[^0-9.-]', num1) or num1 == '.' or num1 == '-' or num1 in '' :
         print("\n\tIncorrect number! Try again\n")
         num1 = ""
 while True:
@@ -62,7 +62,7 @@ while True:
         )
     oper = input("Choose the operation    : ")
     num2 = input("Enter your second number: ").strip()
-    if findall('[^.\d-]', num2) or num2 == '.' or num2 == '-' or num2 in '':
+    if findall('[^0-9.-]', num2) or num2 == '.' or num2 == '-' or num2 in '':
         print("\n\tIncorrect number! Try again\n")
     elif oper == "+":
         print(f"\n\t{float(num1)} + {float(num2)} = {float(num1) + float(num2)}\n")

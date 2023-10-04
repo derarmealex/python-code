@@ -1,7 +1,7 @@
 from re import findall
 while True:
     cm = input("Enter cm: ").strip()
-    if findall('[^.\d]', cm) or cm == '0' or cm == '.' or cm in '':
+    if findall('[^0-9.]', cm) or cm == '0' or cm == '.' or cm in '':
         print("Enter a correct number!")
     else:
         rough = round(float(cm) / 30.48, 2)

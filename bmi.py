@@ -1,6 +1,6 @@
 # I
 while True:
-    try: 
+    try:
         m = float(input("Enter mass of body in kg   : "))
         h = float(input("Enter height of body in cm : "))
     except ValueError:

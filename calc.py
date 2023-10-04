@@ -15,7 +15,7 @@ while True:
         '-------------------------\n'
         '\tYour expression to process now:', num1
         )
-    oper = input("Choose the operation    : ")
+    oper = input("Choose the operation    : ").strip()
     try:
         num2 = float(input("Enter your second number: "))
     except ValueError:
@@ -60,7 +60,7 @@ while True:
         '-------------------------\n'
         '\tYour expression to process now:', num1
         )
-    oper = input("Choose the operation    : ")
+    oper = input("Choose the operation    : ").strip()
     num2 = input("Enter your second number: ").strip()
     if findall('[^0-9.-]', num2) or num2 == '.' or num2 == '-' or num2 in '':
         print("\n\tIncorrect number! Try again\n")

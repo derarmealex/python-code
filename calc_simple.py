@@ -56,7 +56,7 @@ while True:
         'Subtraction:          "-"\n'
         'Multiplication:       "*"\n'
         'Division:             "/"\n'
-        'Exponentiation:       "^"\n'
+        'Exponent:             "^"\n'
         '-------------------------\n'
         '\tYour expression to process now:', num1
         )
@@ -77,7 +77,7 @@ while True:
         try:
             print(f"\n\t{float(num1)} / {float(num2)} = {float(num1) / float(num2)}\n")
         except ZeroDivisionError:
-            print("\n\tCouldn't be divided by 0! Enter a correct divisor\n")
+            print("\n\tCouldn't be divided by 0! Correct divisor needed\n")
         num1 = float(num1) / float(num2)
     elif oper == "^":
         print(f"\n\t{float(num1)} ^ {float(num2)} = {float(num1) ** float(num2)}\n")

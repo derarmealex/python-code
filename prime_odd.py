@@ -1,12 +1,16 @@
-def find_prime():
-    num = 2
-    while num < 100:
-        for i in range(2, num):
-            if num % i == 0:
-                break
+def find_prime(seq):
+    for i in seq:
+        if i > 1:
+            ctr = 2
+            while ctr < i:
+                y = i % ctr
+                ctr += 1
+                if y == 0:
+                    break
+            else:
+                yield i
         else:
-            yield num
-        num += 1
+            continue
 
 
 def find_odd_prime(seq):
@@ -15,6 +19,6 @@ def find_odd_prime(seq):
             yield num
 
 
-a_pipeline = find_odd_prime(find_prime())
+a_pipeline = find_odd_prime(find_prime(range(100)))
 for a_ele in a_pipeline:
     print(a_ele)

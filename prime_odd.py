@@ -19,6 +19,6 @@ def find_odd_prime(seq):
             yield num
 
 
-a_pipeline = find_odd_prime(find_prime(range(100)))
+a_pipeline = find_odd_prime(find_prime([1, 2, 3, 4, 17, 47, 50, 90, 101, 0]))
 for a_ele in a_pipeline:
-    print(a_ele)
+    print(a_ele, end=" ")               # 3 17 47 101

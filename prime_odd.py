@@ -20,5 +20,7 @@ def find_odd_prime(seq):
 
 
 a_pipeline = find_odd_prime(find_prime([1, 2, 3, 4, 17, 47, 50, 90, 101, 0]))
+print(list(a_pipeline))                 # [3, 17, 47, 101]
+# or
 for a_ele in a_pipeline:
     print(a_ele, end=" ")               # 3 17 47 101

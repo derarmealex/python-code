@@ -33,7 +33,7 @@ from re import findall
 while True:
     m = input("Enter mass of body in kg   : ").strip()
     h = input("Enter height of body in cm : ").strip()
-    if findall('[^.\d]', m) or findall('[^.\d]', h) \
+    if findall('[^0-9.]', m) or findall('[^0-9.]', h) \
             or m == '0' or h == '0' \
             or m == '.' or h == '.' \
             or m in '' or h in '':

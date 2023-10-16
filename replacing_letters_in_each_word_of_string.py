@@ -61,7 +61,6 @@ for letter in phrase:
         exchanged += letter
         count_a += 1
 print(exchanged)                                                        # #BBA, #UTOM#TE, #BB#S, #BB#CY, #BB#TOIR
-
 # STRING WITHOUT ALL THE "T"
 stg = "pythonist"
 
